@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
-    <script type="module" src="p-header.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portifólio</title>
+  <script type="module" src="p-header.js"></script>
 </head>
 <body>
-    <header>
-        <div class="nav-bar --pt-br">
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Tecnologias</a>
-            <a href="#">Projetos</a>
-            <a href="#">Contato</a>
+  <header class="p-header">
+    <div class="page-menu">
+      <div class="nav-bar -pt-br">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Tecnologias</a>
+        <a href="#">Projetos</a>
+        <a href="#">Contato</a>
+      </div>
+      <div class="nav-bar -en-us -hide">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Technologies</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+      <button><i class="bi bi-gear-fill"></i></button>
+    </div>
+    <div class="page-settings -hide">
+      <div class="language-settings">
+        <p class="language">
+          Idioma/Language:
+        </p>
+        <div class="settings">
+          <button class="btn --pt-br">
+            PT-BR
+          </button>
+          <button class="btn --en-us">
+            EN-US
+          </button>
         </div>
-        <div class="nav-bar --en-us -hidden">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Technologies</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+      </div>
+      <div class="theme-settings">
+        <p class="theme">
+          Tema/Theme:
+        </p>
+        <div class="settings">
+          <button class="btn --light">
+            Light
+          </button>
+          <button class="btn --dark">
+            Dark
+          </button>
         </div>
-        <button href="#"><i class="bi bi-gear-fill"></i></button>
-    </header>
+      </div>
+    </div>
+  </header>
 </body>
 </html>
