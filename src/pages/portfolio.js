@@ -2,6 +2,7 @@ import '../public/styles/main.scss';
 import './portfolio.scss';
 
 import '../public/components/p-header/p-header.js';
+import '../public/components/p-footer/p-footer.js';
 
 const headerHtml = document.createElement('div');
 headerHtml.innerHTML = `
@@ -58,3 +59,12 @@ headerHtml.innerHTML = `
 headerHtml.classList.add('p-header');
 
 document.querySelector('header').appendChild(headerHtml);
+
+const footerHtml = document.createElement('div');
+footerHtml.innerHTML = `
+  <p>&#169; 2023 - Daniela Tomoe | Designed by Daniela Tomoe</p>
+  `;
+
+footerHtml.classList.add('p-footer');
+
+document.querySelector('footer').appendChild(footerHtml);
