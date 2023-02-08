@@ -4,6 +4,7 @@ import './portfolio.scss';
 import '../public/components/p-header/p-header.js';
 import '../public/components/p-footer/p-footer.js';
 
+// Importação de header e footer
 const headerHtml = document.createElement('div');
 headerHtml.innerHTML = `
   <div class="page-menu">
@@ -68,3 +69,17 @@ footerHtml.innerHTML = `
 footerHtml.classList.add('p-footer');
 
 document.querySelector('footer').appendChild(footerHtml);
+
+// Efeito de digitação
+function typeWrite (element) {
+  const textArray = element.innerHTML.split('');
+  element.innerHTML = '';
+  textArray.forEach(function (letter, i) {
+    setTimeout (function() {
+      element.innerHTML += letter;
+    }, 75*i)
+  })
+}
+
+const typeEffect = document.querySelectorAll('.auto-type');
+typeEffect.forEach(typeWrite);
