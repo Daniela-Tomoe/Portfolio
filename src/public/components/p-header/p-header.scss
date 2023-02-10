@@ -26,11 +26,11 @@
 
       >a {
         color: gray;
-        transition: 0.5s;
-      }
+        transition: color 0.5s;
 
-      >a:hover {
-        color: black;
+        &:hover {
+          color: black;
+        }
       }
     }
 
@@ -47,13 +47,13 @@
         width: 2rem;
         height: 2rem;
       }
-    }
 
-    >button:hover {
-      color: black;
+      &:hover {
+        color: black;
 
-      >svg {
+        >svg {
         animation: rotation 2s linear infinite;
+        }
       }
     }
   }
@@ -103,46 +103,12 @@
             background-color: black;
             color: white;
           }
+
+          &:hover {
+            scale: 1.1;
+          }
         }
-
-        >.btn:hover {
-          scale: 1.1;
-        }
-
       }
     }
-  }
-}
-
-.p-header.--dark-mode {
-  background-color: var(--p-bg-color-dark);
-  color: white;
-
-  >.page-menu {
-    box-shadow: 0 1px 10px 0px rgb(255 255 255 / 53%);
-
-    >.nav-bar {
-      >a {
-        color: white;
-        transition: 0.5s;
-      }
-      >a:hover {
-        scale: 1.1;
-      }
-    }
-
-    >button {
-        color: white;
-    }
-  }
-  .page-settings {
-    background-color: var(--p-bg-color-dark);
-  }
-}
-
-body.--dark-mode {
-  background-color: var(--p-bg-color-dark);
-  >div {
-    color: white;
   }
 }

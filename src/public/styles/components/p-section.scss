@@ -6,29 +6,55 @@
 .p-section {
   max-width: var(--p-wrapper-desktop);
   margin: 0 auto;
-  font-size: 3rem;
-  padding: 12rem 15rem 6rem;
-  line-height: 1.2;
+  
+  &.-home {
+    padding: 12rem 15rem 6rem;
+    line-height: 1.2;
+    font-size: 3rem;
 
-  >.greeting-text {
-    >div {
-      >.name {
-        color: red;
-        font-size: 5rem;
+    >.greeting-text {
+      >div {
+        >.name {
+          color: red;
+          font-size: 5rem;
+        }
+      
+        >.job {
+          color: blue;
+          font-size: 4rem;
+        }
       }
-    
-      >.job {
-        color: blue;
-        font-size: 4rem;
+
+      &:after {
+        content: '|';
+        font-size: 5rem;
+        margin-left: 5px;
+        opacity: 1;
+        animation: blink 0.5s infinite;
+      }
+    }
+
+    >.resume-options {
+      >.resume {
+        font-size: 2rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 1.5rem;
+
+        >svg {
+          height: 2rem;
+          width: 2rem;
+          vertical-align: -0.125em;
+          margin-right: 0.5rem;
+        }
       }
     }
   }
   
-  >.greeting-text:after {
-    content: '|';
-    font-size: 5rem;
-    margin-left: 5px;
-    opacity: 1;
-    animation: blink 0.5s infinite;
+  &.-about {
+    font-size: 2rem;
+
+    
   }
+  
 }
