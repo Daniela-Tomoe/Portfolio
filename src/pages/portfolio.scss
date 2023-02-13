@@ -1,4 +1,6 @@
 body {
+background-color: var(--p-bg-color-light);
+
   &.--dark-mode {
     background-color: var(--p-bg-color-dark);
     color: white;

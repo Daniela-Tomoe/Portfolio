@@ -6,18 +6,19 @@
 .p-header {
   font-size: 2rem;
   color: gray;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 1px 10px 0px #00000038;
+  padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
 
   >.page-menu {
+    max-width: var(--p-wrapper-desktop);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 0 15rem;
-    box-shadow: 0 1px 10px 0px #00000038;
-    position: fixed;
-    width: calc(100vw - 30rem);
-    height: 60px;
-    backdrop-filter: blur(5px);
+    
 
     >.nav-bar {
       display: flex;
