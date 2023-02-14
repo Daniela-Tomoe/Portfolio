@@ -61,6 +61,8 @@
   &.-about {
     font-size: 2rem;
     background-color: var(--p-bg-color-light-secondary);
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
 
     >.title-img-text {
       height: 100%;
