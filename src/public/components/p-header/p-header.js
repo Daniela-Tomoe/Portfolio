@@ -3,25 +3,25 @@ import './p-header.scss';
 
 const pHeaderController = {
   openSettings: () => {
-    if (!document.querySelector('.page-settings').classList.contains('-hide')) {
-      document.querySelector('.page-settings').classList.add('-hide');
-    } else {document.querySelector('.page-settings').classList.remove('-hide')}
+    if (!document.querySelector('.page-settings').classList.contains('_hide')) {
+      document.querySelector('.page-settings').classList.add('_hide');
+    } else {document.querySelector('.page-settings').classList.remove('_hide')}
   },
 
   closeSettings: () => {
-    if (document.querySelector('.page-settings').classList.contains('-hide')) return;
+    if (document.querySelector('.page-settings').classList.contains('_hide')) return;
     
-    document.querySelector('.page-settings').classList.add('-hide');
+    document.querySelector('.page-settings').classList.add('_hide');
   },
 
   changeToEnUs: () => {
-    document.querySelectorAll('.-en-us').forEach(element => element.classList.remove('-hide'));
-    document.querySelectorAll('.-pt-br').forEach(element => element.classList.add('-hide'));
+    document.querySelectorAll('.-en-us').forEach(element => element.classList.remove('_hide'));
+    document.querySelectorAll('.-pt-br').forEach(element => element.classList.add('_hide'));
   },
   
   changeToPtBr: () => {
-    document.querySelectorAll('.-en-us').forEach(element => element.classList.add('-hide'));
-    document.querySelectorAll('.-pt-br').forEach(element => element.classList.remove('-hide'));
+    document.querySelectorAll('.-en-us').forEach(element => element.classList.add('_hide'));
+    document.querySelectorAll('.-pt-br').forEach(element => element.classList.remove('_hide'));
   },
 
   changeToDarkMode: () => {

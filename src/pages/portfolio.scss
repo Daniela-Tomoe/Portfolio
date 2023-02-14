@@ -5,11 +5,14 @@ background-color: var(--p-bg-color-light);
     background-color: var(--p-bg-color-dark);
     color: white;
   
-    header {
+    >header {
       color: white;
 
-      .page-menu {
+      >.p-header {
         box-shadow: 0 1px 10px 0px rgb(255 255 255 / 53%);
+      }
+
+      .page-menu {
 
         >.nav-bar {
           >a {
@@ -25,6 +28,10 @@ background-color: var(--p-bg-color-light);
 
         >button {
           color: white;
+
+          &:hover {
+            color: white;
+          }
         }
       }
     
@@ -33,9 +40,24 @@ background-color: var(--p-bg-color-light);
       }
     }
 
-    footer {
+    >.-about {
+      background-color: var(--p-bg-color-dark-secondary);
       color: white;
-      background-color: var(--p-bg-color-dark);
+
+      >.title-img-text {
+        >.img-text {
+          >.img {
+            background-color: var(--p-bg-color-dark);
+          }
+        }
+      }
+    }
+
+    >footer {
+      color: white;
+      >.p-footer {
+        background-color: var(--p-bg-color-dark);
+      }
     }
   }
 }
