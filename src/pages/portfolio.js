@@ -15,7 +15,7 @@ headerHtml.innerHTML = `
       <a href="#">Projetos</a>
       <a href="#">Contato</a>
     </div>
-    <div class="nav-bar -en-us -hide">
+    <div class="nav-bar -en-us _hide">
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Technologies</a>
@@ -28,7 +28,7 @@ headerHtml.innerHTML = `
       </svg>
     </button>
   </div>
-  <div class="page-settings -hide">
+  <div class="page-settings _hide">
     <div class="language-settings">
       <p class="language">
         Idioma/Language:

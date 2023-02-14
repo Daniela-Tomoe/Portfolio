@@ -4,6 +4,8 @@
 }
 
 .p-section {
+  height: 70vh;
+
   &.-home {
     line-height: 1.2;
     font-size: 3rem;
@@ -11,7 +13,10 @@
     >.greetings-resume {
       max-width: var(--p-wrapper-desktop);
       margin: 0 auto;
-      padding: 12rem 0 6rem;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
       >.greeting-text {
         >div {
@@ -57,21 +62,33 @@
     font-size: 2rem;
     background-color: var(--p-bg-color-light-secondary);
 
-    >.img-text {
+    >.title-img-text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      >.title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 3.5rem;
+      }
+
+      >.img-text {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       max-width: var(--p-wrapper-desktop);
       margin: 0 auto;
-      padding: 6rem 0;
 
       >.img {
         width: 20%;
         background-color: var(--p-bg-color-light);
         display: flex;
         align-items: center;
+        padding: 1rem;
 
         >img {
-          padding: 1rem;
           width: 100%;
           border-radius: 20px;
         }
@@ -79,10 +96,13 @@
 
       >.text {
         width: 70%;
-        line-height: 1.5;
+        line-height: 2;
         text-align: justify;
+        align-self: flex-start;
       }
-    }    
+    }  
+    }
+      
   }
   
 }

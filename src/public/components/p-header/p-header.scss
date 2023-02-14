@@ -8,9 +8,11 @@
   color: gray;
   backdrop-filter: blur(5px);
   box-shadow: 0 1px 10px 0px #00000038;
-  padding: 1.5rem 0;
+  padding: 15px 0;
   position: fixed;
+  max-height: 30px;
   width: 100%;
+  height: 100%;
 
   >.page-menu {
     max-width: var(--p-wrapper-desktop);
