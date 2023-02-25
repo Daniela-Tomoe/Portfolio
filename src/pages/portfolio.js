@@ -92,3 +92,111 @@ window.addEventListener('scroll', function() {
     blurry.style.filter = 'none';
   }
 });
+
+//Efeito nos icons em tecnologias
+const iconsController = {
+  hideOtherDescriptions: (hoveredDiv) => {
+    document.querySelectorAll(`.${hoveredDiv.parentNode.className} > div`).forEach(div => {
+      if(div !== hoveredDiv) {
+        div.style.display = 'none';
+      }
+      hoveredDiv.style.display = 'block';
+    })
+  },
+
+  htmlDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.html-description');
+    if (hover) {
+      document.querySelector('.html-description .-pt-br').innerHTML = 'Html é tal coisa ptbr';
+      document.querySelector('.html-description .-en-us').innerHTML = 'Html é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.html-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.html-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+
+  cssDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.css-description');
+    if (hover) {
+      document.querySelector('.css-description .-pt-br').innerHTML = 'Css é tal coisa ptbr';
+      document.querySelector('.css-description .-en-us').innerHTML = 'Css é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.css-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.css-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+
+  javascriptDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.javascript-description');
+    if (hover) {
+      document.querySelector('.javascript-description .-pt-br').innerHTML = 'javascript é tal coisa ptbr';
+      document.querySelector('.javascript-description .-en-us').innerHTML = 'javascript é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.javascript-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.javascript-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+
+  bootstrapDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.bootstrap-description');
+    if (hover) {
+      document.querySelector('.bootstrap-description .-pt-br').innerHTML = 'bootstrap é tal coisa ptbr';
+      document.querySelector('.bootstrap-description .-en-us').innerHTML = 'bootstrap é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.bootstrap-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.bootstrap-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+
+  gitDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.git-description');
+    if (hover) {
+      document.querySelector('.git-description .-pt-br').innerHTML = 'git é tal coisa ptbr';
+      document.querySelector('.git-description .-en-us').innerHTML = 'git é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.git-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.git-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+
+  viteDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.vite-description');
+    if (hover) {
+      document.querySelector('.vite-description .-pt-br').innerHTML = 'vite é tal coisa ptbr';
+      document.querySelector('.vite-description .-en-us').innerHTML = 'vite é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.vite-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.vite-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+
+  sassDesc: (hover) => {
+    const hoveredDiv = document.querySelector('.sass-description');
+    if (hover) {
+      document.querySelector('.sass-description .-pt-br').innerHTML = 'sass é tal coisa ptbr';
+      document.querySelector('.sass-description .-en-us').innerHTML = 'sass é tal coisa enus';
+      iconsController.hideOtherDescriptions(hoveredDiv);
+    } else {
+      document.querySelector('.sass-description .-pt-br').innerHTML = htmlPtDescPlaceholder;
+      document.querySelector('.sass-description .-en-us').innerHTML = htmlEnDescPlaceholder;
+    }
+  },
+}
+
+window.iconsController = iconsController;
+
+const htmlPtDescPlaceholder = `Passe o mouse sobre os ícones!
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
+  <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
+</svg>`;
+
+const htmlEnDescPlaceholder = `Mouse over the icons!
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
+  <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
+</svg>`;
