@@ -86,10 +86,13 @@ typeEffect.forEach(typeWrite);
 
 //Efeito de retirada de blur
 window.addEventListener('scroll', function() {
-  var blurry = document.querySelector('.-about');
-  var distanceFromTop = blurry.getBoundingClientRect().top;
-  if (distanceFromTop < window.innerHeight * 0.5) {
-    blurry.style.filter = 'none';
+  var sections = document.querySelectorAll('.p-section');
+  for (var i = 0; i < sections.length; i++) {
+    var section = sections[i];
+    var distanceFromTop = section.getBoundingClientRect().top;
+    if (distanceFromTop < window.innerHeight * 0.5) {
+      section.style.filter = 'none';
+    }
   }
 });
 
