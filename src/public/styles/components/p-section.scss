@@ -10,11 +10,13 @@
 }
 
 .p-section {
-  height: 70vh;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
 
   .title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     font-size: 3.5rem;
   }
 
@@ -25,10 +27,7 @@
     >.greetings-resume {
       max-width: var(--p-wrapper-desktop);
       margin: 0 auto;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      width: 100%;
 
       >.greeting-text {
         >div {
@@ -77,10 +76,11 @@
     transition: filter 0.5s ease-out;
 
     >.title-img-text {
-      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      max-width: var(--p-wrapper-desktop);
+      margin: 0 auto;
+      padding: 8rem 0;
 
       >.img-text {
       display: flex;
@@ -122,7 +122,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      // justify-content: center;
+      justify-content: center;
       max-width: var(--p-wrapper-desktop);
       margin: 0 auto;
 
@@ -193,6 +193,69 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  &.-projects {
+    font-size: 2rem;
+    background-color: var(--p-bg-color-light-secondary);
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+
+    >.title-projects {
+      max-width: var(--p-wrapper-desktop);
+      text-align: center;
+      margin: 0 auto;
+      padding: 8rem 0;
+
+      >.title {
+      }
+      >.projects-github {
+        >.projects {
+          display: flex;
+          justify-content: space-between;
+
+          >.project {
+          width: 30%;
+          position: relative;
+
+          &:hover {
+            >.project-img {
+              filter: grayscale(100%) blur(5px);
+              scale: 1.1;
+            }
+
+            >.project-info {
+              opacity: 1;
+            }
+          }
+
+            >.project-img {
+              width: 100%;
+              transition: 1s;
+            }
+
+            >.project-info {
+              position: absolute;
+              top: 0;
+              left: 0;
+              text-align: initial;
+              padding: 2rem;
+              font-size: 2.4rem;
+              opacity: 0;
+              transition: opacity 1s;
+            }
+          }
+        }
+        >.see-more {
+          >button {
+
+          }
+        }
+        >.github-link {
+
         }
       }
     }
