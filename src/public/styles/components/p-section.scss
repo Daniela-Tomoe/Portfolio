@@ -3,8 +3,20 @@
   50% { opacity: 0; }
 }
 
+@keyframes mouseRotation {
+  0% { transform: rotate(-30deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(30deg); }
+}
+
 .p-section {
   height: 70vh;
+
+  .title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+  }
 
   &.-home {
     line-height: 1.2;
@@ -70,12 +82,6 @@
       flex-direction: column;
       justify-content: center;
 
-      >.title {
-        text-align: center;
-        margin-bottom: 3rem;
-        font-size: 3.5rem;
-      }
-
       >.img-text {
       display: flex;
       justify-content: space-between;
@@ -105,6 +111,89 @@
     }  
     }
       
+  }
+
+  &.-technologies {
+    font-size: 2rem;
+
+    >.title-icons-text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: var(--p-wrapper-desktop);
+      margin: 0 auto;
+
+      >.icons-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15rem;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 5px;
+          height: 250px;
+          right: 50%;
+          background-color: var(--p-bg-color-light-secondary);
+        }
+
+        >.icons {
+          display: flex;
+          gap: 4rem;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+
+          >.html, >.css, >.javascript, >.bootstrap, >.git, >.vite, >.sass {
+            position: relative;
+
+            >img {
+              height: 100px;
+            }
+
+            >.black {
+              opacity: 1;
+              transition: 0.5s;
+            }
+
+            >.normal {
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              transition: 0.5s;
+            }
+
+            &:hover {
+              .black {
+                opacity: 0;
+              }
+
+              .normal {
+                opacity: 1;
+                scale: 1.2;
+              }
+            }
+          }
+        }
+
+        >.text {
+          align-self: center;
+
+          >div {
+            >p {
+              >svg {
+                height: 2rem;
+                width: 2rem;
+                vertical-align: -0.125em;
+                animation: mouseRotation 0.5s alternate linear infinite;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   
 }
