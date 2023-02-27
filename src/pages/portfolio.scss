@@ -40,7 +40,7 @@ background-color: var(--p-bg-color-light);
       }
     }
 
-    >.-about {
+    >.-about, >.-projects {
       background-color: var(--p-bg-color-dark-secondary);
       color: white;
 
@@ -48,6 +48,26 @@ background-color: var(--p-bg-color-light);
         >.img-text {
           >.img {
             background-color: var(--p-bg-color-dark);
+          }
+        }
+      }
+    }
+
+    >.-projects {
+      >.title-projects {
+        >.projects-github {
+          >.projects {
+            >.project {
+              >.project-info {
+              color: black;
+              }
+            }
+          }
+
+          >.github-link {
+            &:hover {
+              color: white;
+            }
           }
         }
       }
