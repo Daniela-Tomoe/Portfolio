@@ -9,6 +9,16 @@
   100% { transform: rotate(30deg); }
 }
 
+@keyframes borderX {
+  0% { transform:translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes borderY {
+  0% { transform:translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
 .p-section {
   min-height: 70vh;
   display: flex;
@@ -235,6 +245,7 @@
             >.project-img {
               width: 100%;
               transition: 1s;
+              border-radius: 10px;
             }
 
             >.project-info {
@@ -247,15 +258,84 @@
               opacity: 0;
               transition: opacity 1s;
             }
+
+            &.-soon {
+              >.project-info {
+                color: white;
+                font-size: 6rem;
+                text-align: center;
+                width: 100%;
+                rotate: 20deg;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0;
+                background: #00000075;
+              }
+            }
           }
         }
+
         >.see-more {
-          >button {
-
-          }
+          display: none;
         }
-        >.github-link {
 
+        >.github-link {
+          display: block;
+          font-size: 2.4rem;
+          color: gray;
+          transition: 1s;
+          position: relative;
+          width: fit-content;
+          margin: 0 auto;
+          margin-top: 2rem;
+          padding: 2rem;
+          overflow: hidden;
+
+          &:hover {
+            color: black;
+          }
+
+          >.link-border {
+            position: absolute;
+
+            &:nth-child(1) {
+              top: 0;
+              right: 0;
+              width: 100%;
+              height: 3px;
+              background: linear-gradient(to right, var(--p-bg-color-light-secondary), var(--p-bg-color-light));
+              animation: borderX 1s linear reverse infinite;
+            }
+
+            &:nth-child(2) {
+              top: 0;
+              right: 0;
+              height: 100%;
+              width: 3px;
+              background: linear-gradient(to bottom, var(--p-bg-color-light-secondary), var(--p-bg-color-light));
+              animation: borderY 1s linear reverse infinite;
+              animation-delay: 0.5s;
+            }
+
+            &:nth-child(3) {
+              bottom: 0;
+              right: 0;
+              width: 100%;
+              height: 3px;
+              background: linear-gradient(to left, var(--p-bg-color-light-secondary), var(--p-bg-color-light));
+              animation: borderX 1s linear infinite;
+            }
+
+            &:nth-child(4) {
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 3px;
+              background: linear-gradient(to top, var(--p-bg-color-light-secondary), var(--p-bg-color-light));
+              animation: borderY 1s linear infinite;
+              animation-delay: 0.5s;
+            }
+          }
         }
       }
     }
