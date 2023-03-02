@@ -20,7 +20,7 @@
 }
 
 .p-section {
-  min-height: 70vh;
+  padding: 8rem 0;
   display: flex;
   align-items: center;
 
@@ -33,6 +33,7 @@
   &.-home {
     line-height: 1.2;
     font-size: 3rem;
+    padding: 16rem 0;
 
     >.greetings-resume {
       max-width: var(--p-wrapper-desktop);
@@ -90,7 +91,6 @@
       flex-direction: column;
       max-width: var(--p-wrapper-desktop);
       margin: 0 auto;
-      padding: 8rem 0;
 
       >.img-text {
       display: flex;
@@ -218,10 +218,7 @@
       max-width: var(--p-wrapper-desktop);
       text-align: center;
       margin: 0 auto;
-      padding: 8rem 0;
 
-      >.title {
-      }
       >.projects-github {
         >.projects {
           display: flex;
@@ -335,6 +332,51 @@
               animation: borderY 1s linear infinite;
               animation-delay: 0.5s;
             }
+          }
+        }
+      }
+    }
+  }
+
+  &.-contacts {
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+    font-size: 2rem;
+
+    >.title-contacts-info {
+      max-width: var(--p-wrapper-desktop);
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;      
+
+      >.contacts-info {
+        display: flex;
+        justify-content: space-around;
+
+        >.contact {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: 0.5s;
+
+          >a {
+            color: black;
+
+            .contact-icon {
+              height: 8rem;
+              margin-bottom: 0.5rem;
+              overflow: visible;        
+
+              &.-dark-mode {
+                display: none;
+              }
+            }
+          }          
+
+          &:hover {
+            scale: 1.2;
+            cursor: pointer;
+
           }
         }
       }

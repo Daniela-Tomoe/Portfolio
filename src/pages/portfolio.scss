@@ -73,6 +73,30 @@ background-color: var(--p-bg-color-light);
       }
     }
 
+    >.-contacts {
+      >.title-contacts-info {
+        >.contacts-info {
+           >.contact {  
+            >a {
+              >.contact-icon {
+                &.-dark-mode {
+                  display: block;
+                }
+
+                &.-light-mode {
+                  display: none;
+                }
+              }
+
+              >.info {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
     >footer {
       color: white;
       >.p-footer {

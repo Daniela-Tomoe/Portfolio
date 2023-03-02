@@ -90,7 +90,7 @@ window.addEventListener('scroll', function() {
   for (var i = 0; i < sections.length; i++) {
     var section = sections[i];
     var distanceFromTop = section.getBoundingClientRect().top;
-    if (distanceFromTop < window.innerHeight * 0.5) {
+    if (distanceFromTop < window.innerHeight * 0.6) {
       section.style.filter = 'none';
     }
   }
