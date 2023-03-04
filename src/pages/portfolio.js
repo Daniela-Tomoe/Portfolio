@@ -71,18 +71,48 @@ footerHtml.classList.add('p-footer');
 document.querySelector('footer').appendChild(footerHtml);
 
 // Efeito de digitação / Typing effect
-function typeWrite (element) {
-  const textArray = element.innerHTML.split('');
+const line1 = document.querySelector('#line1');
+const line2 = document.querySelector('#line2');
+const line3 = document.querySelector('#line3');
+const line4 = document.querySelector('#line4');
+const speed = 100;
+
+const delay = line1.innerHTML.length * speed + speed;
+const delay2 = (line1.innerHTML.length + line2.innerHTML.length) * speed + speed;
+const delay3 = (line1.innerHTML.length + line2.innerHTML.length + line3.innerHTML.length) * speed + speed;
+
+function typeEffect (element, speed) {
+  const text = element.innerHTML;
   element.innerHTML = '';
-  textArray.forEach(function (letter, i) {
-    setTimeout (function() {
-      element.innerHTML += letter;
-    }, 75*i)
-  })
+
+  let i = 0;
+  const timer = setInterval (function() {
+    if (i<text.length) {
+      element.append(text.charAt(i));
+      i++
+    } else {
+      clearInterval(timer);
+      element.classList.remove('greeting')
+    }
+  }, speed)
 }
 
-const typeEffect = document.querySelectorAll('.auto-type');
-typeEffect.forEach(typeWrite);
+typeEffect (line1, speed);
+
+setTimeout (function() {
+  line2.style.display = 'block';
+  typeEffect (line2, speed)
+}, delay);
+
+setTimeout (function() {
+  line3.style.display = 'inline-block';
+  typeEffect (line3, speed)
+}, delay2);
+
+setTimeout (function() {
+  line4.style.display = 'inline-block';
+  typeEffect (line4, speed)
+}, delay3);
 
 //Efeito de retirada de blur / Blur removal effect
 window.addEventListener('scroll', function() {
