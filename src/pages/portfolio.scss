@@ -101,6 +101,7 @@ background-color: var(--p-bg-color-light);
       color: white;
       >.p-footer {
         background-color: var(--p-bg-color-dark);
+        border-top: 1px solid var(--p-bg-color-dark-secondary);
       }
     }
   }
