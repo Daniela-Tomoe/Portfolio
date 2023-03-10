@@ -9,18 +9,18 @@ const headerHtml = document.createElement('div');
 headerHtml.innerHTML = `
   <div class="page-menu">
     <div class="nav-bar -pt-br">
-      <a href="#">Início</a>
-      <a href="#">Sobre</a>
-      <a href="#">Tecnologias</a>
-      <a href="#">Projetos</a>
-      <a href="#">Contato</a>
+      <a href="#home">Início</a>
+      <a href="#about">Sobre</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contacts">Contato</a>
     </div>
     <div class="nav-bar -en-us _hide">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Technologies</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contacts">Contact</a>
     </div>
     <button onclick="pHeaderController.openSettings()" class="btn-settings">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
@@ -71,15 +71,19 @@ footerHtml.classList.add('p-footer');
 document.querySelector('footer').appendChild(footerHtml);
 
 // Efeito de digitação / Typing effect
-const line1 = document.querySelector('#line1');
-const line2 = document.querySelector('#line2');
-const line3 = document.querySelector('#line3');
-const line4 = document.querySelector('#line4');
+const line1Pt = document.querySelector('#line1-pt');
+const line2Pt = document.querySelector('#line2-pt');
+const line3Pt = document.querySelector('#line3-pt');
+const line4Pt = document.querySelector('#line4-pt');
+const line1En = document.querySelector('#line1-en');
+const line2En = document.querySelector('#line2-en');
+const line3En = document.querySelector('#line3-en');
+const line4En = document.querySelector('#line4-en');
 const speed = 100;
 
-const delay = line1.innerHTML.length * speed + speed;
-const delay2 = (line1.innerHTML.length + line2.innerHTML.length) * speed + speed;
-const delay3 = (line1.innerHTML.length + line2.innerHTML.length + line3.innerHTML.length) * speed + speed;
+const delay = line1Pt.innerHTML.length * speed + speed;
+const delay2 = (line1Pt.innerHTML.length + line2Pt.innerHTML.length) * speed + speed;
+const delay3 = (line1Pt.innerHTML.length + line2Pt.innerHTML.length + line3Pt.innerHTML.length) * speed + speed;
 
 function typeEffect (element, speed) {
   const text = element.innerHTML;
@@ -92,27 +96,54 @@ function typeEffect (element, speed) {
       i++
     } else {
       clearInterval(timer);
-      element.classList.remove('greeting')
+      element.classList.remove('greeting-pt')
+      element.classList.remove('greeting-en')
     }
   }, speed)
 }
 
-typeEffect (line1, speed);
+function animateTextPt() {
+  typeEffect (line1Pt, speed);
 
-setTimeout (function() {
-  line2.style.display = 'block';
-  typeEffect (line2, speed)
-}, delay);
+  setTimeout (function() {
+    line2Pt.style.display = 'block';
+    typeEffect (line2Pt, speed)
+  }, delay);
 
-setTimeout (function() {
-  line3.style.display = 'inline-block';
-  typeEffect (line3, speed)
-}, delay2);
+  setTimeout (function() {
+    line3Pt.style.display = 'inline-block';
+    typeEffect (line3Pt, speed)
+  }, delay2);
 
-setTimeout (function() {
-  line4.style.display = 'inline-block';
-  typeEffect (line4, speed)
-}, delay3);
+  setTimeout (function() {
+    line4Pt.style.display = 'inline-block';
+    typeEffect (line4Pt, speed)
+  }, delay3);
+}
+
+animateTextPt();
+
+function animateTextEn() {
+  typeEffect (line1En, speed);
+
+  setTimeout (function() {
+    line2En.style.display = 'block';
+    typeEffect (line2En, speed)
+  }, delay);
+
+  setTimeout (function() {
+    line3En.style.display = 'inline-block';
+    typeEffect (line3En, speed)
+  }, delay2);
+
+  setTimeout (function() {
+    line4En.style.display = 'inline-block';
+    typeEffect (line4En, speed)
+  }, delay3);
+}
+
+const LanguageBtn = document.querySelector(`.settings .btn`);
+LanguageBtn.addEventListener('click', animateTextEn, animateTextPt)
 
 //Efeito de retirada de blur / Blur removal effect
 window.addEventListener('scroll', function() {

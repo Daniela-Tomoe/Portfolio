@@ -1,107 +1,127 @@
-body {
-background-color: var(--p-bg-color-light);
+html {
+  scroll-behavior: smooth;
 
-  &.--dark-mode {
-    background-color: var(--p-bg-color-dark);
-    color: white;
+  body {
+    background-color: var(--p-bg-color-light);
   
-    >header {
+    &.--dark-mode {
+      background-color: var(--p-bg-color-dark);
       color: white;
-
-      >.p-header {
-        box-shadow: 0 1px 10px 0px rgb(255 255 255 / 53%);
-      }
-
-      .page-menu {
-
-        >.nav-bar {
-          >a {
-            color: white;
-            transition: scale 0.5s;
-
-            &:hover {
-              scale: 1.1;
-              color: white;
-            }
-          }
-        }
-
-        >button {
-          color: white;
-
-          &:hover {
-            color: white;
-          }
-        }
-      }
     
-      .page-settings {
-        background-color: var(--p-bg-color-dark);
-      }
-    }
-
-    >.-about, >.-projects {
-      background-color: var(--p-bg-color-dark-secondary);
-      color: white;
-
-      >.title-img-text {
-        >.img-text {
-          >.img {
-            background-color: var(--p-bg-color-dark);
-          }
+      >header {
+        color: white;
+  
+        >.p-header {
+          box-shadow: 0 4px 10px 0px #2f3136;
         }
-      }
-    }
-
-    >.-projects {
-      >.title-projects {
-        >.projects-github {
-          >.projects {
-            >.project {
-              >.project-info {
-              color: black;
-              }
-            }
-          }
-
-          >.github-link {
-            &:hover {
-              color: white;
-            }
-          }
-        }
-      }
-    }
-
-    >.-contacts {
-      >.title-contacts-info {
-        >.contacts-info {
-           >.contact {  
+  
+        .page-menu {
+  
+          >.nav-bar {
             >a {
-              >.contact-icon {
-                &.-dark-mode {
-                  display: block;
-                }
-
-                &.-light-mode {
-                  display: none;
+              color: white;
+              transition: 0.5s;
+  
+              &:hover {
+                scale: 1.1;
+                color: var(--p-text-color-dark);
+              }
+            }
+          }
+  
+          >button {
+            color: white;
+  
+            &:hover {
+              color: var(--p-text-color-dark);
+            }
+          }
+        }
+      
+        .page-settings {
+          background-color: var(--p-bg-color-dark);
+          border: 1px solid #2f3136;
+          box-shadow: -3px 3px 5px 0px #2f3136;
+        }
+      }
+  
+      .p-section {
+        .title {
+          color: var(--p-text-color-dark);
+        }
+      }
+  
+      >.-home {
+        >.greetings-resume-photo {
+          >.greetings-resume {
+            >.greetings-text {
+              >.--highlight {
+                color: var(--p-text-color-dark);
+              }
+            }
+          }
+  
+          >.photo {
+            background-color: var(--p-text-color-dark);
+          }
+        }
+      }
+  
+      >.-about, >.-projects {
+        background-color: var(--p-bg-color-dark-secondary);
+        color: white;
+      }
+  
+      >.-projects {
+        >.title-projects {
+          >.projects-github {
+            >.projects {
+              >.project {
+                >.project-info {
+                color: black;
                 }
               }
-
-              >.info {
+            }
+  
+            >.github-link {
+              &:hover {
                 color: white;
               }
             }
           }
         }
       }
-    }
-
-    >footer {
-      color: white;
-      >.p-footer {
-        background-color: var(--p-bg-color-dark);
-        border-top: 1px solid var(--p-bg-color-dark-secondary);
+  
+      >.-contacts {
+        >.title-contacts-info {
+          >.contacts-info {
+             >.contact {  
+              >a {
+                >.contact-icon {
+                  &.-dark-mode {
+                    display: block;
+                  }
+  
+                  &.-light-mode {
+                    display: none;
+                  }
+                }
+  
+                >.info {
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      >footer {
+        color: white;
+        >.p-footer {
+          background-color: var(--p-bg-color-dark);
+          border-top: 1px solid var(--p-bg-color-dark-secondary);
+        }
       }
     }
   }

@@ -5,6 +5,7 @@
 
 .p-header {
   font-size: 2rem;
+  font-family: var(--p-font-family-base);
   color: gray;
   backdrop-filter: blur(5px);
   box-shadow: 0 1px 10px 0px #00000038;
@@ -33,7 +34,7 @@
         transition: color 0.5s;
 
         &:hover {
-          color: black;
+          color: var(--p-text-color-light);
         }
       }
     }
@@ -53,7 +54,7 @@
       }
 
       &:hover {
-        color: black;
+        color: var(--p-text-color-light);
 
         >svg {
         animation: rotation 2s linear infinite;
