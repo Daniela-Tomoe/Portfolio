@@ -2,60 +2,13 @@ import '../public/styles/main.scss';
 import './portfolio.scss';
 
 import '../public/components/p-header/p-header.js';
+import { pHeaderHtml } from '../public/components/p-header/p-header.js';
 import '../public/components/p-footer/p-footer.js';
 
 // Importação de header e footer / Header and Footer import
 const headerHtml = document.createElement('div');
-headerHtml.innerHTML = `
-  <div class="page-menu">
-    <div class="nav-bar -pt-br">
-      <a href="#home">Início</a>
-      <a href="#about">Sobre</a>
-      <a href="#skills">Habilidades</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contacts">Contato</a>
-    </div>
-    <div class="nav-bar -en-us _hide">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contacts">Contact</a>
-    </div>
-    <button onclick="pHeaderController.openSettings()" class="btn-settings">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-      </svg>
-    </button>
-  </div>
-  <div class="page-settings _hide">
-    <div class="language-settings">
-      <p class="language">
-        Idioma/Language:
-      </p>
-      <div class="settings">
-        <button class="btn --pt-br" onclick="pHeaderController.changeToPtBr()">
-          PT-BR
-        </button>
-        <button class="btn --en-us" onclick="pHeaderController.changeToEnUs()">
-          EN-US
-        </button>
-      </div>
-    </div>
-    <div class="theme-settings">
-      <p class="theme">
-        Tema/Theme:
-      </p>
-      <div class="settings">
-        <button class="btn --light" onclick="pHeaderController.changeToLightMode()">
-          Light
-        </button>
-        <button class="btn --dark" onclick="pHeaderController.changeToDarkMode()">
-          Dark
-        </button>
-      </div>
-    </div>
-  </div>`;
+
+headerHtml.innerHTML = pHeaderHtml;
 
 headerHtml.classList.add('p-header');
 
@@ -71,79 +24,56 @@ footerHtml.classList.add('p-footer');
 document.querySelector('footer').appendChild(footerHtml);
 
 // Efeito de digitação / Typing effect
-const line1Pt = document.querySelector('#line1-pt');
-const line2Pt = document.querySelector('#line2-pt');
-const line3Pt = document.querySelector('#line3-pt');
-const line4Pt = document.querySelector('#line4-pt');
-const line1En = document.querySelector('#line1-en');
-const line2En = document.querySelector('#line2-en');
-const line3En = document.querySelector('#line3-en');
-const line4En = document.querySelector('#line4-en');
-const speed = 100;
+const greetingLine1 = document.querySelector('#greeting-line1');
+const greetingLine2 = document.querySelector('#greeting-line2');
+const greetingLine3 = document.querySelector('#greeting-line3');
+const greetingLine4 = document.querySelector('#greeting-line4');
 
-const delay = line1Pt.innerHTML.length * speed + speed;
-const delay2 = (line1Pt.innerHTML.length + line2Pt.innerHTML.length) * speed + speed;
-const delay3 = (line1Pt.innerHTML.length + line2Pt.innerHTML.length + line3Pt.innerHTML.length) * speed + speed;
 
-function typeEffect (element, speed) {
-  const text = element.innerHTML;
-  element.innerHTML = '';
+const speed = 50;
 
-  let i = 0;
-  const timer = setInterval (function() {
-    if (i<text.length) {
-      element.append(text.charAt(i));
-      i++
-    } else {
-      clearInterval(timer);
-      element.classList.remove('greeting-pt')
-      element.classList.remove('greeting-en')
-    }
-  }, speed)
+function typeEffect (element, speed, blockType = "inline-block") {
+  return new Promise((resolve) => {
+    element.style.display = blockType;
+    const text = element.innerHTML;
+    element.innerHTML = '';
+  
+    let index = 0;
+  
+    const timer = setInterval (function() {
+      if (index < text.length) {
+        element.append(text.charAt(index));
+        index++
+      } else {
+        clearInterval(timer);
+        element.classList.remove('-cursor');
+        resolve();
+      }
+    }, speed)
+  })
+
 }
 
-function animateTextPt() {
-  typeEffect (line1Pt, speed);
+function animateText() {
+  [1,2,3,4].forEach(index => {
+    eval(`greetingLine${index}`).classList.add('-cursor');
+    eval(`greetingLine${index}`).style.display = 'none';
+  })
 
-  setTimeout (function() {
-    line2Pt.style.display = 'block';
-    typeEffect (line2Pt, speed)
-  }, delay);
-
-  setTimeout (function() {
-    line3Pt.style.display = 'inline-block';
-    typeEffect (line3Pt, speed)
-  }, delay2);
-
-  setTimeout (function() {
-    line4Pt.style.display = 'inline-block';
-    typeEffect (line4Pt, speed)
-  }, delay3);
+  typeEffect(greetingLine1, speed).then(() => 
+    typeEffect(greetingLine2, speed, 'block').then(() => 
+      typeEffect (greetingLine3, speed).then(() => 
+        typeEffect (greetingLine4, speed)
+      )
+    )
+  )
 }
 
-animateTextPt();
+animateText();
 
-function animateTextEn() {
-  typeEffect (line1En, speed);
+const LanguageBtn = document.querySelector(`#language-btn`);
+LanguageBtn.addEventListener('click', () => animateText())
 
-  setTimeout (function() {
-    line2En.style.display = 'block';
-    typeEffect (line2En, speed)
-  }, delay);
-
-  setTimeout (function() {
-    line3En.style.display = 'inline-block';
-    typeEffect (line3En, speed)
-  }, delay2);
-
-  setTimeout (function() {
-    line4En.style.display = 'inline-block';
-    typeEffect (line4En, speed)
-  }, delay3);
-}
-
-const LanguageBtn = document.querySelector(`.settings .btn`);
-LanguageBtn.addEventListener('click', animateTextEn, animateTextPt)
 
 //Efeito de retirada de blur / Blur removal effect
 window.addEventListener('scroll', function() {

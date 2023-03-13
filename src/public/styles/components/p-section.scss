@@ -55,18 +55,19 @@
             font-size: 4rem;
           }
     
-          >.greeting-pt, >.greeting-en {
-            &::after {
-              content: '|';
-              font-size: 5rem;
-              margin-left: 5px;
-              opacity: 1;
-              animation: blink 0.5s infinite;
-            }
-          }
-  
-          >#line2-pt, >#line3-pt, >#line4-pt, #line2-en, >#line3-en, >#line4-en {
+          >.text {
             display: none;
+
+            &.-cursor{
+
+              &::after {
+                content: '|';
+                font-size: 5rem;
+                margin-left: 5px;
+                opacity: 1;
+                animation: blink 0.5s infinite;
+              }
+            }
           }
         }
     
