@@ -2,6 +2,7 @@ import '../public/styles/main.scss';
 import './portfolio.scss';
 
 import '../public/components/p-header/p-header.js';
+import { pHeaderHtml } from '../public/components/p-header/p-header.js';
 import '../public/components/p-footer/p-footer.js';
 import '../public/i18n/language.js';
 import { lang_pt } from '../public/i18n/pt-br';
@@ -37,13 +38,13 @@ const speed = 50;
 function typeEffect (element, speed, blockType = 'inline-block') {
   return new Promise((resolve) => {
     element.style.display = blockType;
-
+    
     const text = element.innerHTML;
     element.innerHTML = '';
   
     let index = 0;
     const timer = setInterval (function() {
-      if (index<text.length) {
+      if (index < text.length) {
         element.append(text.charAt(index));
         index++
       } else {
