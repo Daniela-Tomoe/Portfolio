@@ -19,21 +19,14 @@
   <section class="p-section -home" id="home">
     <div class="greetings-resume-photo">
       <div class="greetings-resume">
-        <div class="greetings-text -pt-br">
+        <div class="greetings-text">
           <p class="text" id="greeting-line1">Olá, me chamo</p>
           <p class="text --highlight" id="greeting-line2">Daniela Tomoe Kawamata Kurahara</p>
           <p class="text" id="greeting-line3">e sou </p>
           <p class="text --highlight" id="greeting-line4">Desenvolvedora Front-end.</p>
         </div>
         <div class="resume-options">
-          <button class="resume -pt-br">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-              <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-              <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-            </svg>
-            Resume
-          </button>
-          <button class="resume -en-us _hide">
+          <button class="resume">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
               <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
               <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
@@ -43,104 +36,68 @@
         </div>
       </div>
       <div class="photo">        
-        <img src="https://placekitten.com/g/200/300" alt="foto">
+        <img src="https://placekitten.com/g/200/300" class="my-photo" alt="foto">
       </div>      
     </div>
   </section>
 
   <section class="p-section -about" id="about">
     <div class="title-text">
-      <h2 id="sobre-mim" class="title -pt-br">
+      <h2 id="about-me-title" class="title">
         Sobre mim
       </h2>
       <div class="text">
-          <p class="-pt-br">Portuguese ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?</p>
-          <p class="-en-us _hide">English ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?</p>
+          <p id="about-me-text">Portuguese ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?</p>
       </div>
     </div>
   </section>
 
   <section class="p-section -skills" id="skills">
     <div class="title-icons-text">
-      <h2 class="title -pt-br">
+      <h2 id="skills-title" class="title">
         Habilidades
-      </h2>
-      <h2 class="title -en-us _hide">
-        Skills
       </h2>
       <div class="icons-text">
         <div class="icons">
-          <div class="html" onmouseover="iconsController.htmlDesc(true)" onmouseout="iconsController.htmlDesc(false)">
-            <img class="black" src="../public/assets/logos/html5-bw.svg" alt="Logo do html5 em preto e branco">
-            <img class="normal" src="../public/assets/logos/html5.svg" alt="Logo do html5 em cores padrão">
+          <div class="html" onmouseover="iconsController.setDescription('htmlText')" onmouseout="iconsController.clearDescription()">
+            <img class="icons-logo -black" src="../public/assets/logos/html5-bw.svg" alt="Logo do html5 em preto e branco">
+            <img class="icons-logo -normal" src="../public/assets/logos/html5.svg" alt="Logo do html5 em cores padrão">
           </div>
-          <div class="css" onmouseover="iconsController.cssDesc(true)" onmouseout="iconsController.cssDesc(false)">
-            <img src="../public/assets/logos/css3-bw.svg" alt="Logo do css3 em preto e branco" class="black">
-            <img src="../public/assets/logos/css3.svg" alt="Logo do css3 em cores padrão" class="normal">
+          <div class="css" onmouseover="iconsController.setDescription('cssText')" onmouseout="iconsController.clearDescription()">
+            <img src="../public/assets/logos/css3-bw.svg" alt="Logo do css3 em preto e branco" class="icons-logo -black">
+            <img src="../public/assets/logos/css3.svg" alt="Logo do css3 em cores padrão" class="icons-logo -normal">
           </div>
-          <div class="javascript" onmouseover="iconsController.javascriptDesc(true)" onmouseout="iconsController.javascriptDesc(false)">
-            <img src="../public/assets/logos/javascript-bw.svg" alt="Logo do javascript em preto e branco" class="black">
-            <img src="../public/assets/logos/javascript.svg" alt="Logo do javascript em cores padrão" class="normal">
+          <div class="javascript" onmouseover="iconsController.setDescription('javascriptText')" onmouseout="iconsController.clearDescription()">
+            <img src="../public/assets/logos/javascript-bw.svg" alt="Logo do javascript em preto e branco" class="icons-logo -black">
+            <img src="../public/assets/logos/javascript.svg" alt="Logo do javascript em cores padrão" class="icons-logo -normal">
           </div>
-          <div class="bootstrap" onmouseover="iconsController.bootstrapDesc(true)" onmouseout="iconsController.bootstrapDesc(false)">
-            <img src="../public/assets/logos/bootstrap-bw.svg" alt="Logo do bootstrap em preto e branco" class="black">
-            <img src="../public/assets/logos/bootstrap.svg" alt="Logo do bootstrap em cores padrão" class="normal">
+          <div class="bootstrap" onmouseover="iconsController.setDescription('bootstrapText')" onmouseout="iconsController.clearDescription()">
+            <img src="../public/assets/logos/bootstrap-bw.svg" alt="Logo do bootstrap em preto e branco" class="icons-logo -black">
+            <img src="../public/assets/logos/bootstrap.svg" alt="Logo do bootstrap em cores padrão" class="icons-logo -normal">
           </div>
-          <div class="git" onmouseover="iconsController.gitDesc(true)" onmouseout="iconsController.gitDesc(false)">
-            <img src="../public/assets/logos/git-bw.svg" alt="Logo do git em preto e branco" class="black">
-            <img src="../public/assets/logos/git.svg" alt="Logo do git em cores padrão" class="normal">
+          <div class="git" onmouseover="iconsController.setDescription('gitText')" onmouseout="iconsController.clearDescription()">
+            <img src="../public/assets/logos/git-bw.svg" alt="Logo do git em preto e branco" class="icons-logo -black">
+            <img src="../public/assets/logos/git.svg" alt="Logo do git em cores padrão" class="icons-logo -normal">
           </div>
-          <div class="vite" onmouseover="iconsController.viteDesc(true)" onmouseout="iconsController.viteDesc(false)">
-            <img src="../public/assets/logos/vite-bw.svg" alt="Logo do vite em preto e branco" class="black">
-            <img src="../public/assets/logos/vite.svg" alt="Logo do vite em cores padrão" class="normal">
+          <div class="vite" onmouseover="iconsController.setDescription('viteText')" onmouseout="iconsController.clearDescription()">
+            <img src="../public/assets/logos/vite-bw.svg" alt="Logo do vite em preto e branco" class="icons-logo -black">
+            <img src="../public/assets/logos/vite.svg" alt="Logo do vite em cores padrão" class="icons-logo -normal">
           </div>
-          <div class="sass" onmouseover="iconsController.sassDesc(true)" onmouseout="iconsController.sassDesc(false)">
-            <img src="../public/assets/logos/sass-bw.svg" alt="Logo do sass em preto e branco" class="black">
-            <img src="../public/assets/logos/sass.svg" alt="Logo do sass em cores padrão" class="normal">
+          <div class="sass" onmouseover="iconsController.setDescription('sassText')" onmouseout="iconsController.clearDescription()">
+            <img src="../public/assets/logos/sass-bw.svg" alt="Logo do sass em preto e branco" class="icons-logo -black">
+            <img src="../public/assets/logos/sass.svg" alt="Logo do sass em cores padrão" class="icons-logo -normal">
           </div>
         </div>
         <div class="text">
-          <div class="placeholder">
-            <p class="-pt-br">
+          <div id="description">
+          </div>
+          <div id="div-placeholder" class="placeholder">
+            <p id="skill-placeholder-text" class="text">
               Passe o mouse sobre os ícones!
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
                 <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
               </svg>
             </p>
-            <p class="-en-us _hide">
-              Mouse over the icons!
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
-                <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
-              </svg>
-            </p>
-          </div>
-          <div class="html-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
-          </div>
-          <div class="css-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
-          </div>
-          <div class="javascript-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
-          </div>
-          <div class="bootstrap-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
-          </div>
-          <div class="git-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
-          </div>
-          <div class="vite-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
-          </div>
-          <div class="sass-description">
-            <p class="-pt-br"></p>
-            <p class="-en-us _hide"></p>
           </div>
         </div>
       </div>
@@ -149,35 +106,28 @@
 
   <section class="p-section -projects" id="projects">
     <div class="title-projects">
-      <h2 class="title -pt-br">Projetos</h2>
-      <h2 class="title -en-us _hide">Projects</h2>
+      <h2 id="projects-title" class="title">Projetos</h2>
       <div class="projects-github">
         <div class="projects">
           <div class="project">
             <img src="../public/assets/images/project_1.jpg" class="project-img" alt="">
-            <p class="project-info -pt-br">
+            <p id="db-project-info" class="project-info">
               Projeto ONG-DB desenvolvido com HTML, CSS e JavaScript puro, usando RSCSS e ITCSS, e com responsividade.
             </p>
-            <p class="project-info -en-us _hide">
-              Project ONG-DB developed purely with HTML, CSS and JavaScript, using RSCSS and ITCSS, and responsive.
-            </p>
           </div>
           <div class="project -soon">
             <img src="https://placekitten.com/g/500/250" class="project-img" alt="">
-            <p class="project-info -pt-br">Em breve</p>
-            <p class="project-info -en-us _hide">Soon</p>
+            <p id="soon-project-info" class="project-info">Em breve</p>
           </div>
           <div class="project -soon">
             <img src="https://placekitten.com/g/500/250" class="project-img" alt="">
-            <p class="project-info -pt-br">Em breve</p>
-            <p class="project-info -en-us _hide">Soon</p>
+            <p id="soon-project-info" class="project-info">Em breve</p>
           </div>
         </div>
         <div class="see-more">
-          <button class="-pt-br">Ver mais</button>
-          <button class="-en-us _hide">See more</button>
+          <button id="see-more-btn">Ver mais</button>
         </div>
-        <a href="https://github.com/Daniela-Tomoe?tab=repositories" class="github-link" target="_blank">
+        <a href="https://github.com/Daniela-Tomoe?tab=repositories" id="github-repository" class="github-link" target="_blank">
           Repositório Github
           <span class="link-border"></span>
           <span class="link-border"></span>
@@ -190,37 +140,32 @@
 
   <section class="p-section -contacts" id="contacts">
     <div class="title-contacts-info">
-      <h2 class="title -pt-br">Contato</h2>
-      <h2 class="title -en-us _hide">Contact</h2>
+      <h2 id="contacts-title" class="title">Contato</h2>
       <div class="contacts-info">
         <div class="contact">
-          <a href="https://wa.me/5518981816129" target="_blank">
+          <a href="https://wa.me/5518981816129" class="contact-link" target="_blank">
             <img src="../public/assets/logos/whatsapp.svg" class="contact-icon" alt="Logo do WhatsApp">
-            <p class="info -pt-br">WhatsApp/ Telefone</p>
-            <p class="info -en-us _hide">WhatsApp/ Phone number</p>
+            <p id="whatsapp" class="info">WhatsApp/ Telefone</p>
           </a>          
         </div>
         <div class="contact">
-          <a href="mailto:danielatomoenk@gmail.com">
-            <img src="../public/assets/logos/mail-black.png" class="contact-icon -light-mode" alt="Imagem de envelope">
-            <img src="../public/assets/logos/mail-white.png" class="contact-icon -dark-mode" alt="Imagem de envelope">
-            <p class="info -pt-br">Email</p>
-            <p class="info -en-us _hide">Mail</p>
+          <a href="mailto:danielatomoenk@gmail.com" class="contact-link">
+            <img id="mail-icon" src="../public/assets/logos/mail-black.svg" class="contact-icon -light-mode" alt="Imagem de envelope">
+            <img src="../public/assets/logos/mail-white.svg" class="contact-icon -dark-mode" alt="Imagem de envelope">
+            <p id="mail" class="info">Email</p>
           </a>
         </div>
         <div class="contact">
-          <a href="https://github.com/Daniela-Tomoe" target="_blank">
-            <img src="../public/assets/logos/github-black.svg" class="contact-icon -light-mode" alt="Logo do Github">
+          <a href="https://github.com/Daniela-Tomoe" class="contact-link" target="_blank">
+            <img id="github-icon" src="../public/assets/logos/github-black.svg" class="contact-icon -light-mode" alt="Logo do Github">
             <img src="../public/assets/logos/github-white.svg" class="contact-icon -dark-mode" alt="Logo do Github">
-            <p class="info -pt-br">Github</p>
-            <p class="info -en-us _hide">Github</p>
+            <p id="github" class="info">Github</p>
           </a>
         </div>
         <div class="contact">
-          <a href="#" target="_blank">
+          <a href="#" class="contact-link" target="_blank">
             <img src="../public/assets/logos/linkedin.svg" class="contact-icon" alt="Logo do LinkedIn">
-            <p class="info -pt-br">LinkedIn</p>
-            <p class="info -en-us _hide">LinkedIn</p>
+            <p id="linkedin" class="info">LinkedIn</p>
           </a>
         </div>
       </div>
