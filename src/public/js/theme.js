@@ -1,11 +1,11 @@
-import { light_mode } from "./light-mode";
-import { dark_mode } from "./dark-mode";
+import { day_mode } from "./day-mode";
+import { night_mode } from "./night-mode";
 
 function changeThemeHandler (mode) {
   let theme;
 
-  if (mode === 'light') theme = light_mode;
-  if (mode === 'dark') theme = dark_mode;
+  if (mode === 'light') theme = day_mode;
+  if (mode === 'dark') theme = night_mode;
 
   document.querySelector('#mail-icon').setAttribute('src', theme.mailIcon);
   document.querySelector('#github-icon').setAttribute('src', theme.githubIcon);

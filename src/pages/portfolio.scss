@@ -8,7 +8,7 @@ html {
     >.p-section {
       &.-home {
         font-size: 3rem;
-        padding: 16rem 0 13rem;
+        padding: 16rem 5rem 13rem 5rem;
     
         >.greetings-resume-photo {
           max-width: var(--p-wrapper-desktop);
@@ -138,7 +138,7 @@ html {
               flex-wrap: wrap;
               justify-content: flex-end;
     
-              >.html, >.css, >.javascript, >.bootstrap, >.git, >.vite, >.sass {
+              >.html, >.css, >.javascript, >.bootstrap, >.git, >.vite, >.sass, >.angular {
                 position: relative;
     
                 >.icons-logo {
@@ -236,6 +236,7 @@ html {
                   font-size: 2.4rem;
                   opacity: 0;
                   transition: opacity 1s;
+                  color: black;
                 }
     
                 &.-soon {
@@ -249,6 +250,7 @@ html {
                     transform: translateY(-50%);
                     padding: 0;
                     background: #00000075;
+                    color: white;
                   }
                 }
               }
@@ -362,127 +364,6 @@ html {
               }
             }
           }
-        }
-      }
-    }
-    
-    &.--dark-mode {
-      background-color: var(--p-bg-color-base);
-      color: var(--p-text-base-color);
-    
-      >header {
-        color: var(--p-text-base-color);
-  
-        >.p-header {
-          box-shadow: 0 4px 10px 0px #2f3136;
-        }
-  
-        .page-menu {
-  
-          >.nav-bar {
-            >a {
-              color: var(--p-text-base-color);
-              transition: 0.5s;
-  
-              &:hover {
-                scale: 1.1;
-                color: var(--p-text-primary-color);
-              }
-            }
-          }
-  
-          >button {
-            color: var(--p-text-base-color);
-  
-            &:hover {
-              color: var(--p-text-primary-color);
-            }
-          }
-        }
-      
-        .page-settings {
-          background-color: var(--p-bg-color-base);
-          border: 1px solid #2f3136;
-          box-shadow: -3px 3px 5px 0px #2f3136;
-        }
-      }
-  
-      .p-section {
-        .title {
-          color: var(--p-text-primary-color);
-        }
-      }
-  
-      >.-home {
-        >.greetings-resume-photo {
-          >.greetings-resume {
-            >.greetings-text {
-              >.--highlight {
-                color: var(--p-text-primary-color);
-              }
-            }
-          }
-  
-          >.photo {
-            background-color: var(--p-text-primary-color);
-          }
-        }
-      }
-  
-      >.-about, >.-projects {
-        background-color: var(--p-bg-color-base-lighter);
-        color: var(--p-text-base-color);
-      }
-  
-      >.-projects {
-        >.title-projects {
-          >.projects-github {
-            >.projects {
-              >.project {
-                >.project-info {
-                color: black;
-                }
-              }
-            }
-  
-            >.github-link {
-              &:hover {
-                color: var(--p-text-base-color);
-              }
-            }
-          }
-        }
-      }
-  
-      >.-contacts {
-        >.title-contacts-info {
-          >.contacts-info {
-             >.contact {  
-              >a {
-                >.contact-icon {
-                  &.-dark-mode {
-                    display: block;
-                  }
-  
-                  &.-light-mode {
-                    display: none;
-                  }
-                }
-  
-                >.info {
-                  color: var(--p-text-base-color);
-                }
-              }
-            }
-          }
-        }
-      }
-  
-      >footer {
-        color: var(--p-text-base-color);
-        >.p-footer {
-          background-color: var(--p-bg-color-base);
-          border-top: 1px solid var(--p-bg-color-base-lighter);
         }
       }
     }

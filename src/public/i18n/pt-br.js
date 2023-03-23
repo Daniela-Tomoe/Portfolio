@@ -22,6 +22,7 @@ export const lang_pt = {
   gitText: 'Git é um sistema de controle de versões distribuído que rastreia alterações em qualquer conjunto de arquivos do computador, geralmente usado para coordenar o trabalho entre programadores que desenvolvem código-fonte de forma colaborativa durante o desenvolvimento de software.',
   viteText: 'Vite é uma ferramenta de construção que visa fornecer uma experiência de desenvolvimento mais rápida e enxuta para projetos web, gerando a estrutura de código de vários frameworks e configurando bibliotecas.',
   sassText: 'SASS (Syntactically awesome style sheets) é um pré-processador de CSS que adiciona recursos especiais como variáveis, regras aninhadas e mixins no CSS regular. Tem como objetivo tornar o processo de codificação mais simples e eficiente.',
+  angularText: 'Angular é um framework de design de aplicativos e uma plataforma de desenvolvimento para criar aplicativos de página única eficientes e sofisticados.',
   projectsTitle: 'Projetos',
   dbProjectInfo: 'Projeto ONG-DB desenvolvido com HTML, CSS e JavaScript puro, usando RSCSS e ITCSS, e com responsividade.',
   soonProjectInfo: 'Em breve',

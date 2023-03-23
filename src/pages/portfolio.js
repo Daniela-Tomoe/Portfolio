@@ -2,7 +2,6 @@ import '../public/styles/main.scss';
 import './portfolio.scss';
 
 import '../public/components/p-header/p-header.js';
-import { pHeaderHtml } from '../public/components/p-header/p-header.js';
 import '../public/components/p-footer/p-footer.js';
 import '../public/i18n/language.js';
 import { lang_pt } from '../public/i18n/pt-br';

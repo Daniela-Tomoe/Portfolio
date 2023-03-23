@@ -29,6 +29,7 @@ function changeLanguageHandler (lang) {
     document.querySelector('#git-text').textContent = language.gitText;
     document.querySelector('#vite-text').textContent = language.viteText;
     document.querySelector('#sass-text').textContent = language.sassText;
+    document.querySelector('#angular-text').textContent = language.angularText;
     document.querySelector('#projects-title').textContent = language.projectsTitle;
     document.querySelector('#db-project-info').textContent = language.dbProjectInfo;
     document.querySelectorAll('#soon-project-info').forEach((el) => el.textContent = language.soonProjectInfo);

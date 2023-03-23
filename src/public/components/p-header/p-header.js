@@ -68,10 +68,10 @@ export const pHeaderHtml = `
         Tema/Theme:
       </p>
       <div class="settings">
-        <button class="btn --light" onclick="pHeaderController.changeToLightMode()">
+        <button class="btn --light" onclick="changeThemeHandler('light')">
           Light
         </button>
-        <button class="btn --dark" onclick="pHeaderController.changeToDarkMode()">
+        <button class="btn --dark" onclick="changeThemeHandler('dark')">
           Dark
         </button>
       </div>
