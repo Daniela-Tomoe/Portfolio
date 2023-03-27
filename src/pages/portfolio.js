@@ -3,12 +3,13 @@ import './portfolio.scss';
 
 import '../public/components/p-header/p-header.js';
 import '../public/components/p-footer/p-footer.js';
+import { pHeaderHtml } from '../public/components/p-header/p-header.js';
+import { pFooterHtml } from '../public/components/p-footer/p-footer.js';
+
 import '../public/i18n/language.js';
 import { lang_pt } from '../public/i18n/pt-br';
 import { lang_en } from '../public/i18n/en-us.js';
 
-import { pHeaderHtml } from '../public/components/p-header/p-header.js';
-import { pFooterHtml } from '../public/components/p-footer/p-footer.js';
 
 // Importação de header e footer / Header and Footer import
 const headerHtml = document.createElement('div');

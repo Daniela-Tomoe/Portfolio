@@ -1,6 +1,5 @@
 export const lang_en = {
   homeAnchor: 'Home',
-  aboutAnchor: 'About me',
   skillsAnchor: 'Skills',
   projectsAnchor: 'Projects',
   contactsAnchor: 'Contact',

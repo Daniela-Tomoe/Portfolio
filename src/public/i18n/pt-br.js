@@ -1,6 +1,5 @@
 export const lang_pt = {
   homeAnchor: 'Início',
-  aboutAnchor: 'Sobre mim',
   skillsAnchor: 'Habilidades',
   projectsAnchor: 'Projetos',
   contactsAnchor: 'Contato',

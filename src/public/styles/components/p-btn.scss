@@ -1,0 +1,38 @@
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }  
+}
+
+.p-btn {
+  cursor: pointer;
+
+  &.-settings {
+    height: 35px;
+    background-color: transparent;
+    border: none;
+
+    >.lang-img, >.theme-img {
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  &.-lang-active {
+
+    &:hover {
+      animation: pulse infinite alternate 0.5s;
+    }
+  }
+
+  &.-theme-active {
+
+    &:hover {
+      animation: rotation infinite linear 2s;
+    }
+  }
+}
