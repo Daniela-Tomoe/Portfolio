@@ -17,6 +17,7 @@ const headerHtml = document.createElement('div');
 headerHtml.innerHTML = pHeaderHtml;
 
 headerHtml.classList.add('p-header');
+headerHtml.setAttribute('id', 'p-header');
 
 document.querySelector('header').appendChild(headerHtml);
 
@@ -33,9 +34,7 @@ const greetingLine2 = document.querySelector('#greeting-line2');
 const greetingLine3 = document.querySelector('#greeting-line3');
 const greetingLine4 = document.querySelector('#greeting-line4');
 
-const speed = 50;
-
-function typeEffect (element, speed, blockType = 'inline-block') {
+function typingEffect (element, blockType = 'inline-block') {
   return new Promise((resolve) => {
     element.style.display = blockType;
     
@@ -52,7 +51,7 @@ function typeEffect (element, speed, blockType = 'inline-block') {
         element.classList.remove('-cursor');
         resolve();
       }
-    }, speed)
+    }, 50)
   })
 }
 
@@ -63,10 +62,10 @@ function animateText() {
       eval(`greetingLine${index}`).style.display = 'none';
     })
   
-    typeEffect (greetingLine1, speed).then(() => 
-      typeEffect (greetingLine2, speed, 'block').then(() => 
-        typeEffect(greetingLine3, speed).then(() => 
-          typeEffect(greetingLine4, speed)
+    typingEffect (greetingLine1).then(() => 
+      typingEffect (greetingLine2, 'block').then(() => 
+        typingEffect(greetingLine3).then(() => 
+          typingEffect(greetingLine4)
         )
       )
     )
@@ -77,6 +76,15 @@ animateText();
 
 const LanguageBtn = document.querySelectorAll('#language-btn');
 LanguageBtn.forEach((el) => el.addEventListener('click', animateText));
+
+// //Efeito de reiniciar o dotlottie-player / Replay dotlottie-player effect
+// function resplayAnimation() {
+//   const lottiePlayer = document.getElementById('lottie-animation');
+  
+//     lottiePlayer.pause();
+//     lottiePlayer.seek(0);
+//     lottiePlayer.play();
+// }
 
 //Efeito de retirada de blur / Blur removal effect
 window.addEventListener('scroll', function() {
@@ -89,8 +97,6 @@ window.addEventListener('scroll', function() {
     }
   }
 });
-
-localStorage.setItem('lang', 'pt-br');
 
 //Efeito nos icons em habilidades / Effects on skill icons
 const iconsController = {

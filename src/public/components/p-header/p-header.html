@@ -32,33 +32,15 @@
   
       <div id="settings" class="settings">
         <div class="language">
-          <button class="p-btn -settings -lang-active" onclick="pHeaderController.openSettings('language-options')">
+          <button class="p-btn -settings -lang-active" onclick="pHeaderController.toggleLanguage()">
             <img src="../../assets/images/header/bra.png" alt="Bandeira do brasil" id="active-lang" class="lang-img">
           </button>
-  
-          <div id="language-options" class="set-container _hide">
-            <button class="p-btn -settings" onclick="changeLanguageHandler('pt-br'), pHeaderController.closeSettings()">
-              <img src="../../assets/images/header/bra.png" alt="Bandeira do brasil" id="pt-br-btn" class="lang-img">
-            </button>
-            <button class="p-btn -settings" onclick="changeLanguageHandler('en-us'), pHeaderController.closeSettings()">
-              <img src="../../assets/images/header/usa.png" alt="Bandeira dos estados unidos" id="en-us-btn" class="lang-img">
-            </button>
-          </div>
         </div>
   
         <div class="theme">
-          <button class="p-btn -settings -theme-active" onclick="pHeaderController.openSettings('theme-options')">
-            <img src="../../assets/images/header/sun-daymode.png" alt="" id="active-theme" class="theme-img">
+          <button class="p-btn -settings -theme-active" onclick="pHeaderController.toggleTheme()">
+            <img src="../../assets/images/header/sun-daymode.png" alt="Sol" id="active-theme" class="theme-img">
           </button>
-  
-          <div id="theme-options" class="set-container _hide">
-            <button class="p-btn -settings" onclick="changeThemeHandler('day'), pHeaderController.closeSettings()">
-              <img src="../../assets/images/header/sun-daymode.png" id="day-theme" alt="" class="day-mode-btn theme-img">
-            </button>
-            <button class="p-btn -settings" onclick="changeThemeHandler('night'), pHeaderController.closeSettings()">
-              <img src="../../assets/images/header/moon-daymode.png" id="night-theme" alt="" class="night-mode-btn theme-img">
-            </button>
-          </div>
         </div>
       </div>
     </div>

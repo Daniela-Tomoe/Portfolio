@@ -9,8 +9,7 @@ function changeThemeHandler (mode) {
 
   localStorage.setItem('theme', mode);
 
-  document.querySelector('#day-theme').setAttribute('src', theme.dayTheme);
-  document.querySelector('#night-theme').setAttribute('src', theme.nightTheme);
+  document.querySelector('#p-header').style.boxShadow = theme.pHeader;
   document.querySelector('#mail-icon').setAttribute('src', theme.mailIcon);
   document.querySelector('#github-icon').setAttribute('src', theme.githubIcon);
   document.documentElement.style.setProperty('--p-bg-color-base', theme.bgColorBase);
