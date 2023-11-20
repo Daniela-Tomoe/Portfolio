@@ -3,27 +3,25 @@ import './p-header.scss';
 import '../../i18n/language';
 import '../../js/theme';
 
-import { day_mode } from '../../js/day-mode';
-import { night_mode } from '../../js/night-mode';
-
-localStorage.setItem('mode', 'day');
+localStorage.setItem('theme', 'day');
+localStorage.setItem('lang', 'pt-br');
 
 const pHeaderController = {
-  openSettings: (seletor) => {
-    document.querySelector(`#${seletor}`).classList.remove('_hide');
-  },
+  // openSettings: (seletor) => {
+  //   document.querySelector(`#${seletor}`).classList.remove('_hide');
+  // },
   
-  closeSettings: () => {
-    const settingsOptions = document.querySelectorAll('#language-options, #theme-options');
+  // closeSettings: () => {
+  //   const settingsOptions = document.querySelectorAll('#language-options, #theme-options');
 
-    settingsOptions.forEach((el) => {
-      if (el.classList.contains('_hide')) {
-        return
-      } else {
-        el.classList.add('_hide')
-      }  
-    })
-  },
+  //   settingsOptions.forEach((el) => {
+  //     if (el.classList.contains('_hide')) {
+  //       return
+  //     } else {
+  //       el.classList.add('_hide')
+  //     }  
+  //   })
+  // },
 
   changeLangIcon: () => {
     const ptSrc = '../../assets/images/header/bra.png';
@@ -36,19 +34,42 @@ const pHeaderController = {
     }
   },
 
-  changeThemeIcon: () => {
-    const dayThemeSrc = document.querySelector('#day-theme').getAttribute('src');
-    const nightThemeSrc = document.querySelector('#night-theme').getAttribute('src');
+  toggleLanguage() {
+    const currentLanguage = localStorage.getItem('lang');
+    const newLanguage = currentLanguage === 'pt-br' ? 'en-us' : 'pt-br';
+    changeLanguageHandler(newLanguage);
+    pHeaderController.changeLangIcon();
+  },
 
-    if (localStorage.getItem('mode') === 'day') {
-      document.querySelector('#active-theme').setAttribute('src', dayThemeSrc);
+  changeThemeIcon: () => {
+    const daySrc = '../../assets/images/header/sun-daymode.png';
+    const nightSrc = '../../assets/images/header/moon-nightmode.png';
+
+    if (localStorage.getItem('theme') === 'day') {
+      document.querySelector('#active-theme').setAttribute('src', daySrc);
     } else {
-      document.querySelector('#active-theme').setAttribute('src', nightThemeSrc);
+      document.querySelector('#active-theme').setAttribute('src', nightSrc);
     }
+  },
+
+  toggleTheme() {
+    const currentTheme = localStorage.getItem('theme');
+    const newTheme = currentTheme === 'day' ? 'night' : 'day';
+    changeThemeHandler(newTheme);
+    pHeaderController.changeThemeIcon();
+  },
+
+  resplayLottieAnimation() {
+    const lottiePlayer = document.getElementById('lottie-animation');
+    
+      lottiePlayer.pause();
+      lottiePlayer.seek(0);
+      lottiePlayer.play();
   }
 };
 
 window.pHeaderController = pHeaderController;
+
 
 document.addEventListener('click', (event) => {
   if (!event.target.closest('#settings')) {
@@ -76,33 +97,15 @@ export const pHeaderHtml = `
 
     <div id="settings" class="settings">
       <div class="language">
-        <button class="p-btn -settings -lang-active" onclick="pHeaderController.openSettings('language-options')">
+        <button class="p-btn -settings -lang-active" id="language-btn" onclick="pHeaderController.toggleLanguage(), pHeaderController.resplayLottieAnimation()">
           <img src="../../assets/images/header/bra.png" alt="Bandeira do brasil" id="active-lang" class="lang-img">
         </button>
-
-        <div id="language-options" class="set-container _hide">
-          <button class="p-btn -settings" onclick="changeLanguageHandler('pt-br'), pHeaderController.changeLangIcon(), pHeaderController.closeSettings()">
-            <img src="../../assets/images/header/bra.png" alt="Bandeira do brasil" id="pt-br-btn" class="lang-img">
-          </button>
-          <button class="p-btn -settings" onclick="changeLanguageHandler('en-us'), pHeaderController.changeLangIcon(), pHeaderController.closeSettings()">
-            <img src="../../assets/images/header/usa.png" alt="Bandeira dos estados unidos" id="en-us-btn" class="lang-img">
-          </button>
-        </div>
       </div>
 
       <div class="theme">
-        <button class="p-btn -settings -theme-active" onclick="pHeaderController.openSettings('theme-options')">
+        <button class="p-btn -settings -theme-active" onclick="pHeaderController.toggleTheme()">
           <img src="../../assets/images/header/sun-daymode.png" alt="Sol" id="active-theme" class="theme-img">
         </button>
-
-        <div id="theme-options" class="set-container _hide">
-          <button class="p-btn -settings" onclick="changeThemeHandler('day'), pHeaderController.changeThemeIcon(), pHeaderController.closeSettings()">
-            <img src="../../assets/images/header/sun-daymode.png" id="day-theme" alt="Sol" class="day-mode-btn theme-img">
-          </button>
-          <button class="p-btn -settings" onclick="changeThemeHandler('night'), pHeaderController.changeThemeIcon(), pHeaderController.closeSettings()">
-            <img src="../../assets/images/header/moon-daymode.png" id="night-theme" alt="Lua" class="night-mode-btn theme-img">
-          </button>
-        </div>
       </div>
     </div>
   </div>

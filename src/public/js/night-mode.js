@@ -1,6 +1,5 @@
 export const night_mode = {
-  dayTheme: '../../assets/images/header/sun-nightmode.png',
-  nightTheme: '../../assets/images/header/moon-nightmode.png',
+  pHeader: '0 1px 10px 5px #00000038',
   mailIcon: '../public/assets/logos/mail-white.svg',
   githubIcon: '../public/assets/logos/github-white.svg',
   bgColorBase: '#1a1a1a',
