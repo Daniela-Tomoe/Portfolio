@@ -23,10 +23,12 @@ function changeLanguageHandler (lang) {
     document.querySelector('#about-me-text').textContent = language.aboutMeText;
 
     document.querySelector('#skills-title').textContent = language.skillsTitle;
+    document.querySelector('#my-skills').textContent = language.mySkills;
     document.querySelector('#skill-placeholder-text').innerHTML = language.skillPlaceholderText;
 
     document.querySelector('#projects-title').textContent = language.projectsTitle;
-    document.querySelector('#db-project-info').textContent = language.dbProjectInfo;
+    document.querySelector('#my-projects').textContent = language.myProjects;
+    document.querySelector('#db-project-desc').textContent = language.dbProjectDesc;
     document.querySelectorAll('#soon-project-info').forEach((el) => el.textContent = language.soonProjectInfo);
     document.querySelector('#see-more-btn').textContent = language.seeMoreBtn;
     document.querySelector('#github-repository').textContent = language.githubRepository;

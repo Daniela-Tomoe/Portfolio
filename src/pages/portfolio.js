@@ -77,15 +77,6 @@ animateText();
 const LanguageBtn = document.querySelectorAll('#language-btn');
 LanguageBtn.forEach((el) => el.addEventListener('click', animateText));
 
-// //Efeito de reiniciar o dotlottie-player / Replay dotlottie-player effect
-// function resplayAnimation() {
-//   const lottiePlayer = document.getElementById('lottie-animation');
-  
-//     lottiePlayer.pause();
-//     lottiePlayer.seek(0);
-//     lottiePlayer.play();
-// }
-
 //Efeito de retirada de blur / Blur removal effect
 window.addEventListener('scroll', function() {
   var sections = document.querySelectorAll('.p-section');

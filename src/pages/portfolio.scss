@@ -86,17 +86,39 @@ html {
         filter: blur(10px);
         transition: filter 0.5s ease-out;
     
-        >.title-text {
+        >.photo-title-text {
           display: flex;
-          flex-direction: column;
+          align-items: center;
+          gap: 10rem;
           max-width: var(--p-wrapper-desktop);
           margin: 0 auto;
+          width: 100%;
+
+          >.photo {
+            width: 30%;
+
+            >img {
+              width: 100%;
+              height: auto;
+              border-radius: 5rem;
+              border: 1px solid var(--p-text-primary-color);
+            }
+          }
+
+          >.title-text {
+            width: 70%;
+            
+            >.title {
+              text-align: left;
+            }
+
+            >.text {
+              line-height: 2;
+              text-align: justify;
+              align-self: flex-start;
+            } 
+          }
     
-          >.text {
-            line-height: 2;
-            text-align: justify;
-            align-self: flex-start;
-          } 
         }
       }
     
@@ -109,36 +131,27 @@ html {
           height: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           max-width: var(--p-wrapper-desktop);
           margin: 0 auto;
+
+          >.title {
+            text-align: left;
+          }
     
           >.icons-text {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15rem;
-            position: relative;
-    
-            &::after {
-              position: absolute;
-              content: '';
-              width: 5px;
-              height: 250px;
-              right: 50%;
-              background-color: var(--p-bg-color-base-lighter);
-            }
+            margin: 2.5rem 0;
     
             >.icons {
               display: flex;
               gap: 4rem;
+              margin-bottom: 2rem;
               flex-wrap: wrap;
-              justify-content: flex-end;
     
               >.html, >.css, >.javascript, >.bootstrap, >.git, >.vite, >.sass, >.angular {
                 position: relative;
     
                 >.icons-logo {
-                  height: 100px;
+                  height: 80px;
                 }
     
                 >.-black {
@@ -196,60 +209,115 @@ html {
           max-width: var(--p-wrapper-desktop);
           text-align: center;
           margin: 0 auto;
+
+          >.subtitle {
+            text-align: center;
+          }
+
+          .about-projects {
+            margin-bottom: 2.5rem;
+          }
     
           >.projects-github {
             >.projects {
               display: flex;
-              justify-content: space-between;
-    
+              flex-direction: column;
+              gap: 2.5rem;
+
               >.project {
-              width: 30%;
-              position: relative;
-    
-              &:hover {
-                >.project-img {
-                  filter: grayscale(100%) blur(5px);
-                  scale: 1.1;
-                }
-    
-                >.project-info {
-                  opacity: 1;
-                }
-              }
-    
-                >.project-img {
-                  width: 100%;
-                  transition: 1s;
-                  border-radius: 10px;
-                }
-    
-                >.project-info {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  text-align: initial;
-                  padding: 2rem;
-                  font-size: 2.4rem;
-                  opacity: 0;
-                  transition: opacity 1s;
-                  color: black;
-                }
-    
-                &.-soon {
-                  >.project-info {
-                    color: var(--p-text-base-color);
-                    font-size: 6rem;
-                    text-align: center;
+                display: flex;
+                padding: 3rem;
+                gap: 2.5rem;
+                align-items: center;
+                width: 100%;
+                background-color: var(--p-project-container-color);
+                border-radius: 3rem;
+                box-shadow: 2px 2px 11px #00000038;
+
+                >.project-image {
+                  width: 50%;
+
+                  >img {
                     width: 100%;
-                    rotate: 20deg;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    padding: 0;
-                    background: #00000075;
-                    color: white;
+                    border-radius: 3rem;
+                    box-shadow: 2px 2px 11px #00000038;
+                  }
+                }
+
+                >.project-info {
+                  text-align: center;
+                  width: 50%;
+
+                  >.project-title {
+                    color: var(--);
+                    font-weight: 600;
+                  }
+
+                  >.project-description {
+                    margin: 2.5rem 0;
+                  }
+
+                  >.links {
+                    display: flex;
+                    gap: 3rem;
+                    justify-content: center;
+
+                    >a {
+                      color: var(--p-text-primary-color);
+                      font-size: 1.5rem;
+                    }
                   }
                 }
               }
+    
+              // >.project {
+              // width: 30%;
+              // position: relative;
+    
+              // &:hover {
+              //   >.project-img {
+              //     filter: grayscale(100%) blur(5px);
+              //     scale: 1.1;
+              //   }
+    
+              //   >.project-info {
+              //     opacity: 1;
+              //   }
+              // }
+    
+              //   >.project-img {
+              //     width: 100%;
+              //     transition: 1s;
+              //     border-radius: 10px;
+              //   }
+    
+              //   >.project-info {
+              //     position: absolute;
+              //     top: 0;
+              //     left: 0;
+              //     text-align: initial;
+              //     padding: 2rem;
+              //     font-size: 2.4rem;
+              //     opacity: 0;
+              //     transition: opacity 1s;
+              //     color: black;
+              //   }
+    
+              //   &.-soon {
+              //     >.project-info {
+              //       color: var(--p-text-base-color);
+              //       font-size: 6rem;
+              //       text-align: center;
+              //       width: 100%;
+              //       rotate: 20deg;
+              //       top: 50%;
+              //       transform: translateY(-50%);
+              //       padding: 0;
+              //       background: #00000075;
+              //       color: white;
+              //     }
+              //   }
+              // }
             }
     
             >.see-more {
