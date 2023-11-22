@@ -29,7 +29,8 @@ function changeLanguageHandler (lang) {
     document.querySelector('#projects-title').textContent = language.projectsTitle;
     document.querySelector('#my-projects').textContent = language.myProjects;
     document.querySelector('#db-project-desc').textContent = language.dbProjectDesc;
-    document.querySelectorAll('#soon-project-info').forEach((el) => el.textContent = language.soonProjectInfo);
+    document.querySelectorAll('#soon-project-title').forEach((el) => el.textContent = language.soonProjectTitle);
+    document.querySelectorAll('#soon-project-desc').forEach((el) => el.textContent = language.soonProjectDesc);
     document.querySelector('#see-more-btn').textContent = language.seeMoreBtn;
     document.querySelector('#github-repository').textContent = language.githubRepository;
 
