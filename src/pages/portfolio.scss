@@ -1,3 +1,5 @@
+@import '../public/styles/settings/responsive.scss';
+
 html {
   scroll-behavior: smooth;
 
@@ -54,6 +56,7 @@ html {
                 transition: 0.5s;
                 background-color: transparent;
                 color: var(--p-text-base-color);
+                cursor: pointer;
 
                 &:hover {
                   background-color: var(--p-text-primary-color);
@@ -76,6 +79,43 @@ html {
             display: flex;
             align-items: center;
             padding: 1rem;
+          }
+        }
+
+        @include for-tablet {
+          font-size: 3rem;
+
+          >.greetings-resume-animation {
+            max-width: var(--p-wrapper-tablet);
+      
+            >.greetings-resume {
+              >.greetings-text {
+                >p {
+                  line-height: 4rem;
+                }
+      
+                >.--highlight {
+                  font-size: 3.5rem;
+                }          
+              }
+          
+              >.resume-options {
+                margin-top: 1rem;
+      
+                >.resume {
+                  font-size: 1.8rem;                  
+          
+                  >.bi-file-earmark-text {
+                    height: 1.8rem;
+                    width: 1.8rem;
+                  }
+                }
+              }
+            }
+            
+            >.animation {
+              display: none;
+            }
           }
         }
       }
@@ -119,6 +159,14 @@ html {
             } 
           }
     
+        }
+
+        @include for-tablet {
+          font-size: 1.8rem;
+    
+          >.photo-title-text {
+            gap: 5rem;      
+          }
         }
       }
     
@@ -190,11 +238,63 @@ html {
     
               >.placeholder {
                 >.text {
+
                   >.bi-mouse2 {
                     height: 2rem;
                     width: 2rem;
                     vertical-align: -0.125em;
                     animation: mouseRotation 0.5s alternate linear infinite;
+                  }
+
+                  &.-mobile {
+                    display: none;
+                    
+                    >.bi-cursor {
+                      transition: none;
+                      animation: click 1s infinite;
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+        @include for-tablet {
+          font-size: 1.8rem;
+          filter: blur(10px);
+          transition: filter 0.5s ease-out;
+      
+          >.title-icons-text {    
+            >.icons-text {      
+              >.icons {
+                gap: 2rem;
+      
+                >.html, >.css, >.javascript, >.bootstrap, >.git, >.vite, >.sass, >.angular {      
+                  >.icons-logo {
+                    height: 70px;
+                  }                 
+                }
+              }
+      
+              >.text {
+                align-self: center;
+                text-align: justify;
+
+                >#description {
+                  line-height: 1.5;
+                }
+      
+                >.placeholder {
+                  >.text {
+                    &.-desktop {
+                      display: none;
+                    }
+
+                    &.-mobile {
+                      display: inline-block;
+                    }
                   }
                 }
               }
@@ -213,6 +313,9 @@ html {
           max-width: var(--p-wrapper-desktop);
           text-align: center;
           margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
           >.subtitle {
             text-align: center;
@@ -223,17 +326,21 @@ html {
           }
     
           >.projects-github {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+
             >.projects {
               display: flex;
               flex-direction: column;
-              gap: 2.5rem;
+              align-content: center;
+              gap: 3rem;
 
-              >.project {
+              .project {
                 display: flex;
                 padding: 3rem;
                 gap: 2.5rem;
                 align-items: center;
-                width: 100%;
                 background-color: var(--p-project-container-color);
                 border-radius: 3rem;
                 box-shadow: 2px 2px 11px #00000038;
@@ -284,10 +391,34 @@ html {
                   }
                 }
               }
+
+              >.more-projects {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+              }
             }
     
             >.see-more {
               display: none;
+              margin-top: 1rem;
+
+              >button {
+                background-color: transparent;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                &:hover {
+                  .bi-chevron-down {                  
+                    animation: seeMore .8s infinite;                  
+                  }
+                }  
+                
+                >.bi-chevron-down {
+                  vertical-align: -0.225rem;
+                  width: 1.5rem;
+                }
+              }
             }
     
             >.github-link {
@@ -368,7 +499,183 @@ html {
             }
           }
         }
+
+        @include for-tablet {
+          font-size: 2rem;
+          background-color: var(--p-bg-color-base-lighter);
+          filter: blur(10px);
+          transition: filter 0.5s ease-out;
+      
+          >.title-projects {
+            max-width: var(--p-wrapper-desktop);
+            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >.subtitle {
+              text-align: center;
+            }
+
+            .about-projects {
+              margin-bottom: 2.5rem;
+            }
+      
+            >.projects-github {
+              display: flex;
+              flex-direction: column;
+              align-content: center;
+
+              >.projects {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                gap: 3rem;
+
+                .project {
+                  display: flex;
+                  padding: 3rem;
+                  gap: 2.5rem;
+                  align-items: center;
+                  background-color: var(--p-project-container-color);
+                  border-radius: 3rem;
+                  box-shadow: 2px 2px 11px #00000038;
+
+                  >.project-image {
+                    width: 50%;
+
+                    >img {
+                      width: 100%;
+                      border-radius: 3rem;
+                      box-shadow: 2px 2px 11px #00000038;
+                    }
+                  }
+
+                  >.project-info {
+                    text-align: center;
+                    width: 50%;
+
+                    >.project-title {
+                      color: var(--);
+                      font-weight: 600;
+                    }
+
+                    >.project-description {
+                      margin: 2.5rem 0;
+                    }
+
+                    >.links {
+                      display: flex;
+                      gap: 3rem;
+                      justify-content: center;
+
+                      >a {
+                        color: var(--p-text-primary-color);
+                        font-size: 1.5rem;
+                      }
+                    }
+                  }
+
+                  &.-soon {
+                    >.project-info {
+                      >.links {
+                        >a {
+                          cursor: not-allowed;
+                          color: var(--p-text-base-color);
+                        }
+                      }
+                    }
+                  }
+                }
+
+                >.more-projects {
+                  display: none;
+                  flex-direction: column;
+                  gap: 3rem;
+                }
+              }
+    
+            >.see-more {
+              display: block;
+              margin-top: 1rem;
+
+              >button {
+                background-color: transparent;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                &:hover {
+                  .bi-chevron-down {                  
+                    animation: seeMore .8s infinite;                  
+                  }
+                }  
+                
+                >.bi-chevron-down {
+                  vertical-align: -0.225rem;
+                  width: 1.5rem;
+                }
+              }
+            }
+    
+            >.github-link {
+              display: block;
+              font-size: 2.4rem;
+              color: var(--p-text-base-color);
+              transition: 1s;
+              position: relative;
+              width: fit-content;
+              margin: 0 auto;
+              margin-top: 2rem;
+              padding: 2rem;
+              overflow: hidden;
+    
+              >.link-border {
+                position: absolute;          
+    
+                &:nth-child(1) {
+                  top: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 3px;
+                  background: linear-gradient(to right, var(--p-bg-color-base-lighter), var(--p-bg-color-base));
+                  animation: borderX 1s linear reverse infinite;
+                }
+    
+                &:nth-child(2) {
+                  top: 0;
+                  right: 0;
+                  height: 100%;
+                  width: 3px;
+                  background: linear-gradient(to bottom, var(--p-bg-color-base-lighter), var(--p-bg-color-base));
+                  animation: borderY 1s linear reverse infinite;
+                  animation-delay: 0.5s;
+                }
+    
+                &:nth-child(3) {
+                  bottom: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 3px;
+                  background: linear-gradient(to left, var(--p-bg-color-base-lighter), var(--p-bg-color-base));
+                  animation: borderX 1s linear infinite;
+                }
+    
+                &:nth-child(4) {
+                  top: 0;
+                  left: 0;
+                  height: 100%;
+                  width: 3px;
+                  background: linear-gradient(to top, var(--p-bg-color-base-lighter), var(--p-bg-color-base));
+                  animation: borderY 1s linear infinite;
+                  animation-delay: 0.5s;
+                }
+              }            
+            }
+          }
+        }
       }
+    }
     
       &.-contacts {
         filter: blur(10px);

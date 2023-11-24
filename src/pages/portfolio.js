@@ -104,3 +104,19 @@ const iconsController = {
 }
 
 window.iconsController = iconsController;
+
+//Mostrar mais projetos
+const seeMoreController = {
+  seeMore () {
+    let divDisplay = document.querySelector('.more-projects').style.display;
+    console.log(divDisplay)
+  
+    if (divDisplay === 'none') {
+      divDisplay = 'flex';
+    } else {
+      divDisplay = 'none';
+    }
+  }
+}
+
+window.seeMoreController = seeMoreController

@@ -7,21 +7,21 @@ localStorage.setItem('theme', 'day');
 localStorage.setItem('lang', 'pt-br');
 
 const pHeaderController = {
-  // openSettings: (seletor) => {
-  //   document.querySelector(`#${seletor}`).classList.remove('_hide');
-  // },
+  openSettings: (seletor) => {
+    document.querySelector(`#${seletor}`).classList.remove('_hide');
+  },
   
-  // closeSettings: () => {
-  //   const settingsOptions = document.querySelectorAll('#language-options, #theme-options');
+  closeSettings: () => {
+    const settingsOptions = document.querySelectorAll('#language-options, #theme-options');
 
-  //   settingsOptions.forEach((el) => {
-  //     if (el.classList.contains('_hide')) {
-  //       return
-  //     } else {
-  //       el.classList.add('_hide')
-  //     }  
-  //   })
-  // },
+    settingsOptions.forEach((el) => {
+      if (el.classList.contains('_hide')) {
+        return
+      } else {
+        el.classList.add('_hide')
+      }  
+    })
+  },
 
   changeLangIcon: () => {
     const ptSrc = '../../assets/images/header/bra.png';
@@ -90,6 +90,7 @@ export const pHeaderHtml = `
   <div class="navbar-settings">
     <div class="navbar">
       <a id="home-anchor" class="link" href="#home">Início</a>
+      <a id="about-anchor" class="link" href="#about">Sobre mim</a>
       <a id="skills-anchor" class="link" href="#skills">Habilidades</a>
       <a id="projects-anchor" class="link" href="#projects">Projetos</a>
       <a id="contacts-anchor" class="link" href="#contacts">Contato</a>

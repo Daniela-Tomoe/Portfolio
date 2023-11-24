@@ -1,5 +1,6 @@
 export const lang_pt = {
   homeAnchor: 'Início',
+  aboutAnchor: 'Sobre mim',
   skillsAnchor: 'Habilidades',
   projectsAnchor: 'Projetos',
   contactsAnchor: 'Contato',
@@ -8,7 +9,7 @@ export const lang_pt = {
   greetingLine3: 'e sou',
   greetingLine4: 'Desenvolvedora Front-end.',
   aboutMeTitle: 'Sobre mim',
-  aboutMeText: 'Português blablabla',
+  aboutMeText: 'Português Portuguese ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?',
   skillsTitle: 'Habilidades',
   mySkills: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores itaque fuga! Temporibus sequi explicabo facere voluptate officiis, quo tempora distinctio quisquam architecto harum et, cumque vitae iste rem doloremque nihil blanditiis iusto doloribus eveniet, necessitatibus eius provident. Voluptatum rem id consequuntur ad minima, nisi totam? Accusamus obcaecati dolorem reprehenderit?',
   skillPlaceholderText: `Passe o mouse sobre os ícones!

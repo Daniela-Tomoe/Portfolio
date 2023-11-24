@@ -1,5 +1,6 @@
 export const lang_en = {
   homeAnchor: 'Home',
+  aboutAnchor: 'About me',
   skillsAnchor: 'Skills',
   projectsAnchor: 'Projects',
   contactsAnchor: 'Contact',
@@ -8,7 +9,7 @@ export const lang_en = {
   greetingLine3: 'and I am a',
   greetingLine4: 'Front-end developer.',
   aboutMeTitle: 'About me',
-  aboutMeText: 'Inglês blablabla',
+  aboutMeText: 'Inglês Portuguese ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?a',
   skillsTitle: 'Skills',
   mySkills: 'English',
   skillPlaceholderText: `Mouse over the icons!

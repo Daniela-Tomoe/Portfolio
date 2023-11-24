@@ -10,6 +10,7 @@ function changeLanguageHandler (lang) {
   localStorage.setItem('lang', lang);
 
     document.querySelector('#home-anchor').textContent = language.homeAnchor;
+    document.querySelector('#about-anchor').textContent = language.aboutAnchor;
     document.querySelector('#skills-anchor').textContent = language.skillsAnchor;
     document.querySelector('#projects-anchor').textContent = language.projectsAnchor;
     document.querySelector('#contacts-anchor').textContent = language.contactsAnchor;
