@@ -32,7 +32,7 @@ function changeLanguageHandler (lang) {
     document.querySelector('#db-project-desc').textContent = language.dbProjectDesc;
     document.querySelectorAll('#soon-project-title').forEach((el) => el.textContent = language.soonProjectTitle);
     document.querySelectorAll('#soon-project-desc').forEach((el) => el.textContent = language.soonProjectDesc);
-    document.querySelector('#see-more-btn').textContent = language.seeMoreBtn;
+    const seeMoreBtnText = document.querySelector('#see-more-text').textContent;
     document.querySelector('#github-repository').textContent = language.githubRepository;
 
     document.querySelector('#contacts-title').textContent = language.contactsTitle;

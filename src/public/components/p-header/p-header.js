@@ -7,20 +7,22 @@ localStorage.setItem('theme', 'day');
 localStorage.setItem('lang', 'pt-br');
 
 const pHeaderController = {
-  openSettings: (seletor) => {
-    document.querySelector(`#${seletor}`).classList.remove('_hide');
+  openMenu: () => {
+    const navBar = document.getElementById('navbar');
+    const navBarStyle = window.getComputedStyle(navBar).display;
+    if (navBarStyle === 'none') {
+      navBar.style.display = 'flex';
+    } else {
+      navBar.style.display = 'none'
+    }
   },
   
-  closeSettings: () => {
-    const settingsOptions = document.querySelectorAll('#language-options, #theme-options');
-
-    settingsOptions.forEach((el) => {
-      if (el.classList.contains('_hide')) {
-        return
-      } else {
-        el.classList.add('_hide')
-      }  
-    })
+  closeMenu: () => {
+    const navBar = document.getElementById('navbar');
+    const navBarStyle = navBar.style.display;
+    if (navBarStyle === 'flex') {
+      navBar.style.display = 'none'
+    }
   },
 
   changeLangIcon: () => {
@@ -70,17 +72,12 @@ const pHeaderController = {
 
 window.pHeaderController = pHeaderController;
 
-
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('#settings')) {
-    pHeaderController.closeSettings();
-  }
-});
-
 export const pHeaderHtml = `
 <div class="header-container">
-  <div class="menu-mobile _hide">
-    <img src="../../assets/images/header/menu-daymode.png" class="menu" alt="Menu">
+  <div class="menu-mobile" onclick="pHeaderController.openMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
   </div>
 
   <div class="logo">
@@ -88,12 +85,12 @@ export const pHeaderHtml = `
   </div>
 
   <div class="navbar-settings">
-    <div class="navbar">
-      <a id="home-anchor" class="link" href="#home">Início</a>
-      <a id="about-anchor" class="link" href="#about">Sobre mim</a>
-      <a id="skills-anchor" class="link" href="#skills">Habilidades</a>
-      <a id="projects-anchor" class="link" href="#projects">Projetos</a>
-      <a id="contacts-anchor" class="link" href="#contacts">Contato</a>
+    <div class="navbar" id="navbar">
+      <a id="home-anchor" class="link" href="#home" onclick="pHeaderController.closeMenu()">Início</a>
+      <a id="about-anchor" class="link" href="#about" onclick="pHeaderController.closeMenu()">Sobre mim</a>
+      <a id="skills-anchor" class="link" href="#skills" onclick="pHeaderController.closeMenu()">Habilidades</a>
+      <a id="projects-anchor" class="link" href="#projects" onclick="pHeaderController.closeMenu()">Projetos</a>
+      <a id="contacts-anchor" class="link" href="#contacts" onclick="pHeaderController.closeMenu()">Contato</a>
     </div>
 
     <div id="settings" class="settings">

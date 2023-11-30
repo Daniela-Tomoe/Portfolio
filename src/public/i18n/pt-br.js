@@ -29,7 +29,10 @@ export const lang_pt = {
   dbProjectDesc: 'O projeto ONG-DB é um portal de uma ONG fictícia focada em ajudar cães de rua. Foi desenvolvido com HTML, CSS e JavaScript puro, aplicando o padrão RSCSS e ITCSS, e com responsividade.',
   soonProjectTitle: 'Em breve',
   soonProjectDesc: 'Em breve.',
-  seeMoreBtn: 'Ver mais',
+  seeMoreBtnText: {
+    more: 'Ver mais',
+    less: 'Ver menos'
+  },
   githubRepository: 'Repositório Github',
   contactsTitle: 'Contato',
   whatsapp: 'WhatsApp',

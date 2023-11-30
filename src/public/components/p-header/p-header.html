@@ -14,8 +14,10 @@
 </head>
 <body>
   <div class="header-container">
-    <div class="menu-mobile _hide">
-      <img src="../../assets/images/header/menu-daymode.png" class="menu" alt="Menu">
+    <div class="menu-mobile">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
     </div>
   
     <div class="logo">
@@ -23,8 +25,9 @@
     </div>
   
     <div class="navbar-settings">
-      <div class="navbar">
+      <div class="navbar" id="navbar">
         <a id="home-anchor" class="link" href="#home">Início</a>
+        <a id="about-anchor" class="link" href="#about">Sobre mim</a>
         <a id="skills-anchor" class="link" href="#skills">Habilidades</a>
         <a id="projects-anchor" class="link" href="#projects">Projetos</a>
         <a id="contacts-anchor" class="link" href="#contacts">Contato</a>
@@ -32,7 +35,7 @@
   
       <div id="settings" class="settings">
         <div class="language">
-          <button class="p-btn -settings -lang-active" onclick="pHeaderController.toggleLanguage()">
+          <button class="p-btn -settings -lang-active" id="language-btn" onclick="pHeaderController.toggleLanguage(), pHeaderController.resplayLottieAnimation()">
             <img src="../../assets/images/header/bra.png" alt="Bandeira do brasil" id="active-lang" class="lang-img">
           </button>
         </div>
