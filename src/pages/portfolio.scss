@@ -83,8 +83,6 @@ html {
         }
 
         @include for-tablet {
-          font-size: 3rem;
-
           >.greetings-resume-animation {
             max-width: var(--p-wrapper-tablet);
       
@@ -99,9 +97,7 @@ html {
                 }          
               }
           
-              >.resume-options {
-                margin-top: 1rem;
-      
+              >.resume-options {      
                 >.resume {
                   font-size: 1.8rem;                  
           
@@ -115,6 +111,38 @@ html {
             
             >.animation {
               display: none;
+            }
+          }
+        }
+
+        @include for-mobile {
+          font-size: 2.5rem;
+          >.greetings-resume-animation {
+            max-width: var(--p-wrapper-cellphone);
+
+            >.greetings-resume {
+              text-align: center;
+
+              >.greetings-text {
+                >.--highlight {
+                  font-size: 3rem;
+                }
+              }
+
+              >.resume-options {
+                margin-top: 1rem;
+      
+                >.resume {
+                  font-size: 1.5rem;
+                  padding: 1.2rem;                  
+          
+                  >.bi-file-earmark-text {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    margin-right: 0;
+                  }
+                }
+              }
             }
           }
         }
@@ -155,7 +183,6 @@ html {
             >.text {
               line-height: 2;
               text-align: justify;
-              align-self: flex-start;
             } 
           }
     
@@ -178,6 +205,24 @@ html {
 
             >.title-text {
               width: 100%;
+            }
+          }
+        }
+
+        @include for-mobile {
+          font-size: 1.6rem;
+
+          >.photo-title-text {
+            max-width: var(--p-wrapper-cellphone);
+
+            >.title-text {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              >.text {
+                text-align: center;
+              }
             }
           }
         }
@@ -276,8 +321,6 @@ html {
 
         @include for-tablet {
           font-size: 1.8rem;
-          filter: blur(10px);
-          transition: filter 0.5s ease-out;
       
           >.title-icons-text {  
             max-width: var(--p-wrapper-tablet);
@@ -312,6 +355,35 @@ html {
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+
+        @include for-mobile {
+          font-size: 1.6rem;
+
+          >.title-icons-text {
+            align-items: center;
+
+            >.about-skills {
+              text-align: center;
+            }
+
+            >.icons-text {
+              >.icons {
+                justify-content: center;
+                gap: 1.5rem;
+
+                >.html, >.css, >.javascript, >.bootstrap, >.git, >.vite, >.sass, >.angular {      
+                  >.icons-logo {
+                    height: 55px;
+                  }                 
+                }
+              }
+
+              >.text {
+                text-align: center;
               }
             }
           }
@@ -527,6 +599,8 @@ html {
                   gap: 3rem;
 
                   >.project-info {
+                    width: 100%;
+
                     >.project-description {
                       margin: 2rem 0;
                     }
@@ -534,6 +608,10 @@ html {
                     >.links {
                       gap: 2.5rem;
                     }
+                  }
+
+                  >.project-image {
+                    width: 100%;
                   }
                 }
 
@@ -564,14 +642,34 @@ html {
                     width: 100%;
                   }
                 }
+
+                >.more-projects {
+                  >.project {
+                    flex-direction: column;
+
+                    &:first-child {
+                      >.project-info {
+                        order: 2;
+                      }
+                    }
+                  }
+                }
               }
             }
           }
         }
 
         @include for-mobile {
+          font-size: 1.6rem;
+
           >.title-projects {
             max-width: var(--p-wrapper-cellphone);
+
+            >.projects-github {
+              >.github-link {
+                font-size: 1.6rem;
+              }
+            }
           }
         }
       }
@@ -622,8 +720,36 @@ html {
         }
 
         @include for-tablet {
+          font-size: 1.8rem;
+
           >.title-contacts-info {
             max-width: var(--p-wrapper-tablet);
+
+            >.contacts-info {
+              gap: 3rem;
+            }
+          }
+        }
+
+        @include for-mobile {
+          font-size: 1.6rem;
+
+          >.title-contacts-info {
+            max-width: var(--p-wrapper-cellphone);
+
+            >.contacts-info {
+              gap: 2rem;
+
+              >.contact {
+                >.contact-link {
+                  >.contact-icon {
+                    height: 5rem;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+
           }
         }
       }

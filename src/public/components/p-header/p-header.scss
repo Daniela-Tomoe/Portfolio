@@ -1,6 +1,7 @@
 @import '../../styles/settings/responsive.scss';
 
 .p-header {
+  box-sizing: border-box;
   font-size: 2rem;
   font-family: var(--p-font-family-base);
   color: var(--p-text-title-color);
@@ -8,8 +9,8 @@
   box-shadow: 0 1px 10px 0px #00000038;
   padding: 1.5rem 5rem;
   position: fixed;
-  max-height: 3rem;
-  width: calc(100vw - 10rem);
+  max-height: 6rem;
+  width: 100vw;
   height: 100%;
   z-index: 2;
 
@@ -71,11 +72,6 @@
         display: flex;
         gap: 1rem;
         justify-content: flex-end;
-
-        >.language, >.theme {
-          align-self: center;
-          position: relative;
-        }
       }
     }
   }
@@ -86,7 +82,7 @@
       position: relative;      
 
       >.menu-mobile {
-        display: inline-block;
+        display: flex;
       }
 
       >.logo {
@@ -135,13 +131,33 @@
           top: 50%;
           transform: translateY(-50%);
           left: 5rem;
-
-          >.language, >.theme {
-            align-self: center;
-            position: relative;
-          }
         }
       }
     }
+  }
+
+  @include for-mobile {
+    >.header-container {
+      max-width: var(--p-wrapper-cellphone);
+
+      >.menu-mobile {
+        height: 80%;
+      }
+
+      >.logo {
+        height: 80%;
+      }
+
+      >.navbar-settings {
+        >.navbar {
+          width: 20rem;
+        }
+
+        >.settings {
+          gap: 0;
+          left: 3rem;
+        }
+      }
+    }    
   }
 }
