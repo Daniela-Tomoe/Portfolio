@@ -105,29 +105,32 @@ const iconsController = {
 
 window.iconsController = iconsController;
 
-//Mostrar mais projetos / Show more projects
-let isButtonSeeMore = true;
-
+//Mostrar mais/menos projetos / Show more/less projects
 const seeMoreController = {
   seeMore () {
-    const moreProjectsDiv = document.querySelector('.more-projects');
+    const moreProjectsDiv = document.querySelector('#more-projects');
     let divDisplay = window.getComputedStyle(moreProjectsDiv).display;
     let buttonText = document.querySelector('#see-more-text');
     let svgPath = document.querySelector('#bi-chevron');
+
+    const selectedLang = localStorage.getItem('lang') === 'pt-br' ? lang_pt : lang_en;
+    let isBtnMore;   
+    localStorage.getItem('isBtnMore');
+    
   
     if (divDisplay === 'none') {
       moreProjectsDiv.style.display = 'flex';
       svgPath.innerHTML = '<path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>';
-      isButtonSeeMore = false;
+      isBtnMore = false;
+      localStorage.setItem('isBtnMore', isBtnMore.toString());
     } else {
       moreProjectsDiv.style.display = 'none';
       svgPath.innerHTML = '<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>';
-      isButtonSeeMore = true;
-    }
-
-    const selectedLang = localStorage.getItem('lang') === 'pt-br' ? lang_pt : lang_en;
-
-    buttonText.textContent = isButtonSeeMore ? selectedLang.seeMoreBtnText.more : selectedLang.seeMoreBtnText.less;
+      isBtnMore = true;
+      localStorage.setItem('isBtnMore', isBtnMore.toString());
+    } 
+    buttonText.textContent = isBtnMore ? selectedLang.seeMore : selectedLang.seeLess;
+    
   }
 }
 

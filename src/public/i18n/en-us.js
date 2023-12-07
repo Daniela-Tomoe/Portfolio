@@ -8,10 +8,11 @@ export const lang_en = {
   greetingLine2: 'Daniela Tomoe Kawamata Kurahara',
   greetingLine3: 'and I am a',
   greetingLine4: 'Front-end developer.',
+  resumeDownload: '../public/assets/arquivos/Teste ENUS.txt',
   aboutMeTitle: 'About me',
-  aboutMeText: 'Inglês Portuguese ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?a',
+  aboutMeText: "Hello, you can call me Dani. I am 30 years old, married and live in Araçatuba, São Paulo's inland city. I graduated in veterinary medicine at Araçatuba's Unesp but ended up not pursuing a career in the area. I found out about the front-end through a friend in 2022, and I fell in love with the profession. Since then, I have been studying to work in the programming area, focusing on Angular.",
   skillsTitle: 'Skills',
-  mySkills: 'English',
+  mySkills: 'I learned from front-end courses on Alura and Origamid platforms, as well as websites and Youtube videos from channels about programming.',
   skillPlaceholderText: `Mouse over the icons!
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
     <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
@@ -25,14 +26,12 @@ export const lang_en = {
   sassText: 'SASS is a CSS preprocessor, which adds special features such as variables, nested rules and mixins into regular CSS. The aim is to make the coding process simpler and more efficient.',
   angularText: 'Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.',
   projectsTitle: 'Projects',
-  myProjects: 'Blabla english',
+  myProjects: 'All my projects are open source and are hosted on github. I invite you to my repository to analyze my codes.',
   dbProjectDesc: 'The ONG-DB Project is a website for a fictious NGO focused on helping stray dogs. It was developed with pure HTML, CSS and JavaScript, applying RSCSS pattern and ITCSS, and with responsiveness.',
   soonProjectTitle: 'Soon',
   soonProjectDesc: 'Soon.',
-  seeMoreBtnText: {
-    more: 'See more',
-    less: 'See less'
-  },
+  seeMore: 'See more',
+  seeLess: 'See less',
   githubRepository: 'Github Repository',
   contactsTitle: 'Contact',
   whatsapp: 'WhatsApp',

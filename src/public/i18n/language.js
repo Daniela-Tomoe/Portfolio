@@ -3,9 +3,16 @@ import { lang_en } from './en-us.js';
 
 function changeLanguageHandler (lang) {
   let language;
+  let isBtnMore = localStorage.getItem('isBtnMore') === 'true';  
 
   if (lang === 'pt-br') language = lang_pt;
   if (lang === 'en-us') language = lang_en;
+
+  if (isBtnMore === null) {
+    const width = window.innerWidth;
+    // isBtnMore = width < 900;
+    localStorage.setItem('isBtnMore', isBtnMore.toString())
+  }
 
   localStorage.setItem('lang', lang);
 
@@ -20,6 +27,8 @@ function changeLanguageHandler (lang) {
     document.querySelector('#greeting-line3').textContent = language.greetingLine3;
     document.querySelector('#greeting-line4').textContent = language.greetingLine4;
 
+    document.querySelector('#resume-download').href = language.resumeDownload;
+
     document.querySelector('#about-me-title').textContent = language.aboutMeTitle;
     document.querySelector('#about-me-text').textContent = language.aboutMeText;
 
@@ -32,7 +41,7 @@ function changeLanguageHandler (lang) {
     document.querySelector('#db-project-desc').textContent = language.dbProjectDesc;
     document.querySelectorAll('#soon-project-title').forEach((el) => el.textContent = language.soonProjectTitle);
     document.querySelectorAll('#soon-project-desc').forEach((el) => el.textContent = language.soonProjectDesc);
-    const seeMoreBtnText = document.querySelector('#see-more-text').textContent;
+    document.querySelector('#see-more-text').textContent = isBtnMore? language.seeMore : language.seeLess;
     document.querySelector('#github-repository').textContent = language.githubRepository;
 
     document.querySelector('#contacts-title').textContent = language.contactsTitle;

@@ -47,30 +47,33 @@ html {
         
             >.resume-options {
               margin-top: 1rem;
-    
-              >.resume {
-                font-size: 2rem;
-                border: 2px solid var(--p-text-base-color);
-                border-radius: 10px;
-                padding: 1.5rem;
-                transition: 0.5s;
-                background-color: transparent;
-                color: var(--p-text-base-color);
-                cursor: pointer;
 
-                &:hover {
-                  background-color: var(--p-text-primary-color);
-                  color: white;
-                  border: 2px solid var(--p-bg-color-base-lighter);
-                }
-        
-                >.bi-file-earmark-text {
-                  height: 2rem;
-                  width: 2rem;
-                  vertical-align: -0.125em;
-                  margin-right: 0.5rem;
+              >a {
+                >.resume {
+                  font-size: 2rem;
+                  border: 2px solid var(--p-text-base-color);
+                  border-radius: 10px;
+                  padding: 1.5rem;
+                  transition: 0.5s;
+                  background-color: transparent;
+                  color: var(--p-text-base-color);
+                  cursor: pointer;
+  
+                  &:hover {
+                    background-color: var(--p-text-primary-color);
+                    color: white;
+                    border: 2px solid var(--p-bg-color-base-lighter);
+                  }
+          
+                  >.bi-file-earmark-text {
+                    height: 2rem;
+                    width: 2rem;
+                    vertical-align: -0.125em;
+                    margin-right: 0.5rem;
+                  }
                 }
               }
+    
             }
           }
           
@@ -97,15 +100,17 @@ html {
                 }          
               }
           
-              >.resume-options {      
-                >.resume {
-                  font-size: 1.8rem;                  
-          
-                  >.bi-file-earmark-text {
-                    height: 1.8rem;
-                    width: 1.8rem;
+              >.resume-options {     
+                >a {
+                  >.resume {
+                    font-size: 1.8rem;                  
+            
+                    >.bi-file-earmark-text {
+                      height: 1.8rem;
+                      width: 1.8rem;
+                    }
                   }
-                }
+                } 
               }
             }
             
@@ -131,17 +136,19 @@ html {
 
               >.resume-options {
                 margin-top: 1rem;
-      
-                >.resume {
-                  font-size: 1.5rem;
-                  padding: 1.2rem;                  
-          
-                  >.bi-file-earmark-text {
-                    height: 1.5rem;
-                    width: 1.5rem;
-                    margin-right: 0;
+
+                >a {
+                  >.resume {
+                    font-size: 1.5rem;
+                    padding: 1.2rem;                  
+            
+                    >.bi-file-earmark-text {
+                      height: 1.5rem;
+                      width: 1.5rem;
+                      margin-right: 0;
+                    }
                   }
-                }
+                }      
               }
             }
           }
@@ -688,7 +695,7 @@ html {
           >.contacts-info {
             display: flex;
             justify-content: center;
-            gap: 5rem;
+            gap: 6rem;
     
             >.contact {
               display: flex;

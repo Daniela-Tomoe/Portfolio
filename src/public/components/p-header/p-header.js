@@ -1,6 +1,8 @@
 import '../../styles/main.scss';
 import './p-header.scss';
 import '../../i18n/language';
+import { lang_pt } from '../../i18n/pt-br.js';
+import { lang_en } from '../../i18n/en-us.js';
 import '../../js/theme';
 
 localStorage.setItem('theme', 'day');
@@ -20,7 +22,9 @@ const pHeaderController = {
   closeMenu: () => {
     const navBar = document.getElementById('navbar');
     const navBarStyle = navBar.style.display;
-    if (navBarStyle === 'flex') {
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth < 900 && navBarStyle === 'flex') {
       navBar.style.display = 'none'
     }
   },
@@ -71,6 +75,30 @@ const pHeaderController = {
 };
 
 window.pHeaderController = pHeaderController;
+
+function toggleDisplay() {
+  const navBar = document.querySelector('#navbar');
+  const moreProjects = document.querySelector('#more-projects');
+  let buttonText = document.querySelector('#see-more-text');
+  const selectedLang = localStorage.getItem('lang') === 'pt-br' ? lang_pt : lang_en;
+  const windowWidth = window.innerWidth;  
+
+  if (windowWidth < 900) {
+    navBar.style.display = 'none';
+    moreProjects.style.display = 'none';
+
+  } else {
+    navBar.style.display = 'flex';
+    moreProjects.style.display = 'flex';
+    localStorage.setItem('isBtnMore', 'true');
+  }
+
+  let isBtnMore = localStorage.getItem('isBtnMore') === 'true' ? true : false;
+  buttonText.textContent = isBtnMore ? selectedLang.seeMore : selectedLang.seeLess;
+}
+
+window.addEventListener('resize', toggleDisplay);
+
 
 export const pHeaderHtml = `
 <div class="header-container">

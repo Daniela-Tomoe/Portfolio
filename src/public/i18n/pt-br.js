@@ -8,10 +8,11 @@ export const lang_pt = {
   greetingLine2: 'Daniela Tomoe Kawamata Kurahara',
   greetingLine3: 'e sou',
   greetingLine4: 'Desenvolvedora Front-end.',
+  resumeDownload: '../public/assets/arquivos/Teste PTBR.txt',
   aboutMeTitle: 'Sobre mim',
-  aboutMeText: 'Português Portuguese ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro quo ad neque delectus eligendi ut, atque sapiente voluptas commodi debitis maxime ducimus autem quod quibusdam inventore architecto nemo qui placeat quam aliquam. Numquam asperiores itaque illo dicta harum similique mollitia adipisci, expedita nesciunt quam! Tempora inventore itaque assumenda aspernatur?',
+  aboutMeText: 'Olá, pode me chamar de Dani. Tenho 30 anos, sou casada e moro na cidade de Araçatuba, interior de São Paulo. Me formei em medicina veterinária na Unesp de Araçatuba mas acabei não seguindo carreira na área. Descobri sobre o front-end por meio de um amigo em 2022, e me encantei com a profissão. Desde então, venho estudando para trabalhar na área de programação, com foco em Angular.',
   skillsTitle: 'Habilidades',
-  mySkills: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores itaque fuga! Temporibus sequi explicabo facere voluptate officiis, quo tempora distinctio quisquam architecto harum et, cumque vitae iste rem doloremque nihil blanditiis iusto doloribus eveniet, necessitatibus eius provident. Voluptatum rem id consequuntur ad minima, nisi totam? Accusamus obcaecati dolorem reprehenderit?',
+  mySkills: 'Aprendi com cursos de front-end nas plataformas Alura e Origamid, além de sites e vídeos no youtube de canais da área! Estou a todo momento aprimorando meus conhecimentos, me atualizando e fazendo novos cursos.',
   skillPlaceholderText: `Passe o mouse sobre os ícones!
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-mouse2" viewBox="0 0 16 16">
     <path d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5V1.033zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154zM12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188V6.5z"/>
@@ -25,14 +26,12 @@ export const lang_pt = {
   sassText: 'SASS (Syntactically awesome style sheets) é um pré-processador de CSS que adiciona recursos especiais como variáveis, regras aninhadas e mixins no CSS regular. Tem como objetivo tornar o processo de codificação mais simples e eficiente.',
   angularText: 'Angular é um framework de design de aplicativos e uma plataforma de desenvolvimento para criar aplicativos de página única eficientes e sofisticados.',
   projectsTitle: 'Projetos',
-  myProjects: 'Blabla ptbr',
+  myProjects: 'Todos os meus projetos estão com o código aberto e hospedados no github. Convido você a visitar meu repositório e analisar os meus códigos.',
   dbProjectDesc: 'O projeto ONG-DB é um portal de uma ONG fictícia focada em ajudar cães de rua. Foi desenvolvido com HTML, CSS e JavaScript puro, aplicando o padrão RSCSS e ITCSS, e com responsividade.',
   soonProjectTitle: 'Em breve',
   soonProjectDesc: 'Em breve.',
-  seeMoreBtnText: {
-    more: 'Ver mais',
-    less: 'Ver menos'
-  },
+  seeMore: 'Ver mais',
+  seeLess: 'Ver menos',
   githubRepository: 'Repositório Github',
   contactsTitle: 'Contato',
   whatsapp: 'WhatsApp',
