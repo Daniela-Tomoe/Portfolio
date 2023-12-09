@@ -416,7 +416,8 @@ html {
           }
 
           .about-projects {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
           }
     
           >.projects-github {
@@ -460,6 +461,7 @@ html {
 
                   >.project-description {
                     margin: 2.5rem 0;
+                    font-size: 1.7rem;
                   }
 
                   >.links {
@@ -574,19 +576,19 @@ html {
 
                 >.link-border {
                   &:nth-child(1) {
-                    background: linear-gradient(to right, black, var(--p-bg-color-base));
+                    background: linear-gradient(to right, var(--p-text-title-color), var(--p-bg-color-base));
                   }
       
                   &:nth-child(2) {
-                    background: linear-gradient(to bottom, black, var(--p-bg-color-base));
+                    background: linear-gradient(to bottom, var(--p-text-title-color), var(--p-bg-color-base));
                   }
       
                   &:nth-child(3) {
-                    background: linear-gradient(to left, black, var(--p-bg-color-base));
+                    background: linear-gradient(to left, var(--p-text-title-color), var(--p-bg-color-base));
                   }
       
                   &:nth-child(4) {
-                    background: linear-gradient(to top, black, var(--p-bg-color-base));
+                    background: linear-gradient(to top, var(--p-text-title-color), var(--p-bg-color-base));
                   }
                 }
               }
@@ -707,13 +709,17 @@ html {
                 color: var(--p-text-base-color);
     
                 .contact-icon {
-                  height: 6rem;
+                  height: 5.5rem;
                   margin-bottom: 0.5rem;
-                  overflow: visible;        
+                  overflow: visible;                       
     
                   &.-dark-mode {
                     display: none;
                   }
+                }
+
+                >.info {
+                  font-size: 1.7rem;   
                 }
               }          
     

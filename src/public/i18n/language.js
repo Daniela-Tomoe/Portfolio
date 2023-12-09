@@ -30,7 +30,7 @@ function changeLanguageHandler (lang) {
     document.querySelector('#resume-download').href = language.resumeDownload;
 
     document.querySelector('#about-me-title').textContent = language.aboutMeTitle;
-    document.querySelector('#about-me-text').textContent = language.aboutMeText;
+    document.querySelector('#about-me-text').innerHTML = language.aboutMeText;
 
     document.querySelector('#skills-title').textContent = language.skillsTitle;
     document.querySelector('#my-skills').textContent = language.mySkills;
@@ -39,10 +39,12 @@ function changeLanguageHandler (lang) {
     document.querySelector('#projects-title').textContent = language.projectsTitle;
     document.querySelector('#my-projects').textContent = language.myProjects;
     document.querySelector('#db-project-desc').textContent = language.dbProjectDesc;
-    document.querySelectorAll('#soon-project-title').forEach((el) => el.textContent = language.soonProjectTitle);
-    document.querySelectorAll('#soon-project-desc').forEach((el) => el.textContent = language.soonProjectDesc);
+    document.querySelector('#portfolio-project-title').textContent = language.portfolioProjectTitle;
+    document.querySelector('#portfolio-project-desc').textContent = language.portfolioProjectDesc;
+    document.querySelector('#card-app-project-title').textContent = language.cardAppProjectTitle;
+    document.querySelector('#card-app-project-desc').textContent = language.cardAppProjectDesc;
     document.querySelector('#see-more-text').textContent = isBtnMore? language.seeMore : language.seeLess;
-    document.querySelector('#github-repository').textContent = language.githubRepository;
+    document.querySelector('#github-repository').innerHTML = language.githubRepository;
 
     document.querySelector('#contacts-title').textContent = language.contactsTitle;
     document.querySelector('#whatsapp').textContent = language.whatsapp;
