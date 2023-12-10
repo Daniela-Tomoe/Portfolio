@@ -35,6 +35,7 @@ function changeLanguageHandler (lang) {
     document.querySelector('#skills-title').textContent = language.skillsTitle;
     document.querySelector('#my-skills').textContent = language.mySkills;
     document.querySelector('#skill-placeholder-text').innerHTML = language.skillPlaceholderText;
+    document.querySelector('#mobile-skill-placeholder-text').innerHTML = language.mobileSkillPlaceholderText;
 
     document.querySelector('#projects-title').textContent = language.projectsTitle;
     document.querySelector('#my-projects').textContent = language.myProjects;
