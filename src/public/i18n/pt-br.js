@@ -8,7 +8,7 @@ export const lang_pt = {
   greetingLine2: 'Daniela Tomoe Kawamata Kurahara',
   greetingLine3: 'e sou',
   greetingLine4: 'Desenvolvedora Front-end.',
-  resumeDownload: '../public/assets/arquivos/Teste PTBR.txt',
+  resumeDownload: '../public/assets/files/DanielaTomoe-ptbr.pdf',
   aboutMeTitle: 'Sobre mim',
   aboutMeText: 'Oi, sou a Dani, uma veterinária que decidiu virar programadora. Eu tenho 30 anos, sou casada e moro em Araçatuba, SP.<br> Percebi que tratar bugs é mais legal que tratar animais. Já faz quase 1 ano e meio que estou nesse mundo do front-end e, desde então, finalizei diversos cursos mirando e me especializando no framework Angular!<br> Como aperfeiçoei bem minha base de HTML, CSS e JavaScript, estou aberta a oportunidades e me sinto bem confortável em aprender um novo framework caso seja necessário!',
   skillsTitle: 'Habilidades',
