@@ -8,7 +8,7 @@ export const lang_en = {
   greetingLine2: 'Daniela Tomoe Kawamata Kurahara',
   greetingLine3: 'and I am a',
   greetingLine4: 'Front-end developer.',
-  resumeDownload: '../public/assets/arquivos/Teste ENUS.txt',
+  resumeDownload: '../public/assets/files/DanielaTomoe-ResumeEng.pdf',
   aboutMeTitle: 'About me',
   aboutMeText: "Hi, I'm Dani, a veterinarian that decided to be a programmer. I'm 30 years old, married and live in Araçatuba, SP.<br> I realized that solving bugs is cooler than treating animals. I've been in the Front-end world for almost 1 and a half years now and, since then, I completed various courses focusing on and specializing in Angular framework!<br> As I've improved my HTML, CSS and JavaScript base well, I'm open to opportunities and feel comfortable in learning a new framework if necessary!",
   skillsTitle: 'Skills',
